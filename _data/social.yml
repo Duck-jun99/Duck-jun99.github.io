@@ -206,3 +206,7 @@ keybase:
 download:
   name: Download
   icon: icon-box-add
+google-play:
+  name: Google play
+  icon: icon-google
+  prepend: "https://play.google.com/store/apps/details?id="

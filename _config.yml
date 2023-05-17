@@ -29,7 +29,7 @@ description:           >
   with a focus on personal sites that are meant to impress.
 
 # A shorter description for the sidebar.
-tagline:                Byoungjun Choi Blog
+tagline:                초보 개발자의 개발 블로그
 #tagline:               Change `tagline` in `_config.yml`
 
 # A list of keywords for your blog
@@ -53,28 +53,33 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Example
-    url:               /example/
-  - title:             Documentation
-    url:               /docs/
+  - title:             Portfolio
+    url:               /portfolio/
+  - title:             Study
+    url:               /study/
+#  - title:             Documentation
+#    url:               /docs/
   - title:             About
     url:               /about/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
 legal:
-  - title:             LICENSE
-    url:               /LICENSE/
-  - title:             NOTICE
-    url:               /NOTICE/
-  - title:             CHANGELOG
-    url:               /CHANGELOG/
+  - title:             Byoungjun
+#  - title:             Github
+#    url:               https://github.com/Duck-jun99
+#  - title:             LICENSE
+#    url:               /LICENSE/
+#  - title:             NOTICE
+#    url:               /NOTICE/
+#  - title:             CHANGELOG
+#    url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright:             © 2021. All rights reserved.
 
 # Format of the permalinks
-permalink:             /:categories/:year-:month-:day-:title/
+permalink:             /:categories/:year-  xxxx:month-:day-:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
@@ -85,14 +90,14 @@ paginate_path:         /:num/
 # ---------------------------------------------------------------------------------------
 
 remote_theme: hydecorp/hydejack@v9
-#theme: jekyll-theme-hydejack
+# theme: jekyll-theme-hydejack
 
 
 # Customizaton
 # ----------------------------------------------------------------------------------------
  
 # Sidebar image and theme color of the site.
-accent_image:          /assets/img/sidebar-bg.jpg
+accent_image:          /assets/img/sidebar2.jpg
 accent_color:          rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,
