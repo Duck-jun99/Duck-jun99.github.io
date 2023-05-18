@@ -44,7 +44,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Blog" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"<Byoungjun> <Choi>"},"dateModified":"2023-05-16T22:57:43+09:00","description":"The official Hydejack blog. Version updates, example content and how-to guides on how to blog with Jekyll.","headline":"Blog","name":"Byoungjun","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"<Byoungjun> <Choi>"},"url":"http://localhost:4000/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"<Byoungjun> <Choi>"},"dateModified":"2023-05-16T22:57:43+09:00","description":"The official Hydejack blog. Version updates, example content and how-to guides on how to blog with Jekyll.","headline":"Blog","name":"Byoungjun","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/duck-logo.png"},"name":"<Byoungjun> <Choi>"},"url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -107,7 +107,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2023-05-18T00:44:55+09:00',
+    INDEX_KEY: 'index--2023-05-19T01:36:49+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -138,7 +138,38 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 <!--<![endif]-->
 
 
-
+<script type="module">
+    document.querySelector('hy-push-state').addEventListener('load', () => {
+        let tocElement = document.getElementById("markdown-toc");
+  
+        if(tocElement){
+            let affixedDiv = document.createElement("div");
+            affixedDiv.style.position = "relative";
+            affixedDiv.style.top = "-1rem";
+            tocElement.parentNode.insertBefore(affixedDiv, tocElement);
+  
+            let headerList = document.getElementsByClassName("permalink");
+            let prevElement;
+            window.addEventListener("scroll", () => {
+                let hurdleTop = affixedDiv.getBoundingClientRect().top;
+                if(hurdleTop <= 0) tocElement.classList.add("affix");
+                else tocElement.classList.remove("affix");
+  
+                for(let i=0;i<headerList.length;i++){
+                    if(headerList[i].getBoundingClientRect().top >= 0){
+                    prevElement?.style.removeProperty("font-weight");
+                    let tocId = "markdown-toc-" + headerList[i].parentNode.id;
+                    prevElement = document.getElementById(tocId);
+                    prevElement.style.fontWeight = "bold";;
+  
+                    break;
+                    }
+                }
+            });
+        }
+    });
+    </script>
+  
 
 </head>
 
@@ -175,14 +206,14 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
   <div class="sidebar-about">
     
       <a class="no-hover" href="/" tabindex="-1">
-        <img src="/assets/img/logo.png" class="avatar" alt="Byoungjun" width="120" height="120" loading="lazy" />
+        <img src="/assets/img/duck-logo.png" class="avatar" alt="Byoungjun" width="120" height="120" loading="lazy" />
       </a>
     
     <a class="sidebar-title" href="/"><h2 class="h1">Byoungjun</h2></a>
     
     
       <p class="">
-        초보 개발자의 개발 블로그
+        노력하는 개발 블로그
 
       </p>
     
@@ -355,31 +386,23 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 
 
 
-<article id="post-study-2023-05-17-test1" class="page post mb6" role="article">
+<article id="post-codingtest-2023-05-19-test3" class="page post mb6" role="article">
   <header>
     <h1 class="post-title flip-project-title">
-      <a href="/study/2023-%20%20xxxx05-18-2023-05-17-test1/" class="flip-title">
-        [Github블로그] 한글 테스트용
+      <a href="/codingtest/2023-%20%20xxxx05-19-2023-05-19-test3/" class="flip-title">
+        [CodingTest] 테스트
       </a>
     </h1>
 
     <div class="post-date">
       
       <span class="ellipsis mr1">
-        <time datetime="2023-05-18T00:44:55+09:00">18 May 2023</time> in <a href="/study/" class="flip-title">Study</a> 
+        <time datetime="2023-05-19T01:36:49+09:00">19 May 2023</time> in <a href="/codingtest/" class="flip-title">CodingTest</a> 
       </span>
       
         
           
           
-          
-            
-            
-            <span class="ellipsis" data-tippy-content="Last modified at: 17 May 2023">
-              <span class="sr-only">Last modified at:</span>
-              <span class="icon-history"></span>
-              <time datetime="2023-05-17T01:50:59+09:00">2023-05-17</time>
-            </span>
           
         
       
@@ -405,7 +428,63 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
     
     <footer>
       <p class="read-more">
-        Continue reading <a class="heading flip-title" href="/study/2023-%20%20xxxx05-18-2023-05-17-test1/">[Github블로그] 한글 테스트용</a>
+        Continue reading <a class="heading flip-title" href="/codingtest/2023-%20%20xxxx05-19-2023-05-19-test3/">[CodingTest] 테스트</a>
+
+      </p>
+    </footer>
+  
+</article>
+
+
+  
+
+
+
+
+
+<article id="post-android-2023-05-19-test2" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      <a href="/android/2023-%20%20xxxx05-19-2023-05-19-test2/" class="flip-title">
+        [Android] 포스트 예정 사항
+      </a>
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2023-05-19T01:36:49+09:00">19 May 2023</time> in <a href="/android/" class="flip-title">Android</a> 
+      </span>
+      
+        
+          
+          
+          
+        
+      
+    </div>
+
+    
+    
+
+    
+
+
+
+  <div class="hr pb0"></div>
+
+
+  </header>
+
+  
+    <p>안드로이드 분야에 대해 공부한 부분을 올릴 것입니다.</p>
+
+
+    
+    
+    <footer>
+      <p class="read-more">
+        Continue reading <a class="heading flip-title" href="/android/2023-%20%20xxxx05-19-2023-05-19-test2/">[Android] 포스트 예정 사항</a>
 
       </p>
     </footer>

@@ -46,7 +46,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Scripts" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"<Byoungjun> <Choi>"},"dateModified":"2023-05-16T22:57:43+09:00","description":"There are two ways of adding third party scripts. Embedding is ideal for one-off scripts, while global scripts are loaded on every page.","headline":"Scripts","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"<Byoungjun> <Choi>"},"url":"http://localhost:4000/docs/scripts/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"<Byoungjun> <Choi>"},"dateModified":"2023-05-16T22:57:43+09:00","description":"There are two ways of adding third party scripts. Embedding is ideal for one-off scripts, while global scripts are loaded on every page.","headline":"Scripts","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/duck-logo.png"},"name":"<Byoungjun> <Choi>"},"url":"http://localhost:4000/docs/scripts/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -109,7 +109,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2023-05-18T00:44:55+09:00',
+    INDEX_KEY: 'index--2023-05-19T01:36:49+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -140,7 +140,38 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 <!--<![endif]-->
 
 
-
+<script type="module">
+    document.querySelector('hy-push-state').addEventListener('load', () => {
+        let tocElement = document.getElementById("markdown-toc");
+  
+        if(tocElement){
+            let affixedDiv = document.createElement("div");
+            affixedDiv.style.position = "relative";
+            affixedDiv.style.top = "-1rem";
+            tocElement.parentNode.insertBefore(affixedDiv, tocElement);
+  
+            let headerList = document.getElementsByClassName("permalink");
+            let prevElement;
+            window.addEventListener("scroll", () => {
+                let hurdleTop = affixedDiv.getBoundingClientRect().top;
+                if(hurdleTop <= 0) tocElement.classList.add("affix");
+                else tocElement.classList.remove("affix");
+  
+                for(let i=0;i<headerList.length;i++){
+                    if(headerList[i].getBoundingClientRect().top >= 0){
+                    prevElement?.style.removeProperty("font-weight");
+                    let tocId = "markdown-toc-" + headerList[i].parentNode.id;
+                    prevElement = document.getElementById(tocId);
+                    prevElement.style.fontWeight = "bold";;
+  
+                    break;
+                    }
+                }
+            });
+        }
+    });
+    </script>
+  
 
 </head>
 
@@ -348,14 +379,14 @@ you can disable push state by adding to your config file:</p>
   <div class="sidebar-about">
     
       <a class="no-hover" href="/" tabindex="-1">
-        <img src="/assets/img/logo.png" class="avatar" alt="Byoungjun" width="120" height="120" loading="lazy" />
+        <img src="/assets/img/duck-logo.png" class="avatar" alt="Byoungjun" width="120" height="120" loading="lazy" />
       </a>
     
     <a class="sidebar-title" href="/"><h2 class="h1">Byoungjun</h2></a>
     
     
       <p class="">
-        초보 개발자의 개발 블로그
+        노력하는 개발 블로그
 
       </p>
     

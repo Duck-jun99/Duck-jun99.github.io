@@ -30,22 +30,22 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   
     
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>[Github블로그] 한글 테스트용 | Byoungjun</title>
+<title>Android | Byoungjun</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="[Github블로그] 한글 테스트용" />
+<meta property="og:title" content="Android" />
 <meta name="author" content="<Byoungjun> <Choi>" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="한글 테스트용 첫번째 포스트." />
-<meta property="og:description" content="한글 테스트용 첫번째 포스트." />
-<link rel="canonical" href="http://localhost:4000/study/2023-%20%20xxxx05-18-2023-05-17-test1/" />
-<meta property="og:url" content="http://localhost:4000/study/2023-%20%20xxxx05-18-2023-05-17-test1/" />
+<meta name="description" content="Android에 관한 공부 내용" />
+<meta property="og:description" content="Android에 관한 공부 내용" />
+<link rel="canonical" href="http://localhost:4000/android/" />
+<meta property="og:url" content="http://localhost:4000/android/" />
 <meta property="og:site_name" content="Byoungjun" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-05-18T00:44:55+09:00" />
+<meta property="article:published_time" content="2023-05-19T01:36:49+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="[Github블로그] 한글 테스트용" />
+<meta property="twitter:title" content="Android" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"<Byoungjun> <Choi>"},"dateModified":"2023-05-17T01:50:59+09:00","datePublished":"2023-05-18T00:44:55+09:00","description":"한글 테스트용 첫번째 포스트.","headline":"[Github블로그] 한글 테스트용","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/study/2023-%20%20xxxx05-18-2023-05-17-test1/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"<Byoungjun> <Choi>"},"url":"http://localhost:4000/study/2023-%20%20xxxx05-18-2023-05-17-test1/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"<Byoungjun> <Choi>"},"dateModified":"2023-05-19T01:15:22+09:00","datePublished":"2023-05-19T01:36:49+09:00","description":"Android에 관한 공부 내용","headline":"Android","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/duck-logo.png"},"name":"<Byoungjun> <Choi>"},"url":"http://localhost:4000/android/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -73,7 +73,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta name="generator" content="Hydejack v9.1.6" />
 
 
-<link rel="alternate" href="http://localhost:4000/study/2023-%20%20xxxx05-18-2023-05-17-test1/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/android/" hreflang="en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Byoungjun" />
 
@@ -108,7 +108,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2023-05-18T00:44:55+09:00',
+    INDEX_KEY: 'index--2023-05-19T01:36:49+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -139,7 +139,38 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 <!--<![endif]-->
 
 
-
+<script type="module">
+    document.querySelector('hy-push-state').addEventListener('load', () => {
+        let tocElement = document.getElementById("markdown-toc");
+  
+        if(tocElement){
+            let affixedDiv = document.createElement("div");
+            affixedDiv.style.position = "relative";
+            affixedDiv.style.top = "-1rem";
+            tocElement.parentNode.insertBefore(affixedDiv, tocElement);
+  
+            let headerList = document.getElementsByClassName("permalink");
+            let prevElement;
+            window.addEventListener("scroll", () => {
+                let hurdleTop = affixedDiv.getBoundingClientRect().top;
+                if(hurdleTop <= 0) tocElement.classList.add("affix");
+                else tocElement.classList.remove("affix");
+  
+                for(let i=0;i<headerList.length;i++){
+                    if(headerList[i].getBoundingClientRect().top >= 0){
+                    prevElement?.style.removeProperty("font-weight");
+                    let tocId = "markdown-toc-" + headerList[i].parentNode.id;
+                    prevElement = document.getElementById(tocId);
+                    prevElement.style.fontWeight = "bold";;
+  
+                    break;
+                    }
+                }
+            });
+        }
+    });
+    </script>
+  
 
 </head>
 
@@ -173,7 +204,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 
   <main
   id="_main"
-  class="content layout-post"
+  class="content layout-list"
   role="main"
 >
   <nav id="breadcrumbs" class="screen-only"><ul>
@@ -184,251 +215,66 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
       <li>
         
           <span>/</span>
-          
-          
-          <a href="/study/">study</a>
-        
-      </li>
-    
-      <li>
-        
-          <span>/</span>
-          <span>2023-  xxxx05-18-2023-05-17-test1</span>
+          <span>android</span>
         
       </li>
     
   
 </ul></nav>
-  
-
-
-
-
-
-
-
-
-
-
-<article id="post-study-2023-05-17-test1" class="page post mb6" role="article">
+  <article class="page mb6" role="article">
   <header>
-    <h1 class="post-title flip-project-title">
-      
-        [Github블로그] 한글 테스트용
-      
-    </h1>
-
-    <div class="post-date">
-      
-      <span class="ellipsis mr1">
-        <time datetime="2023-05-18T00:44:55+09:00">18 May 2023</time> in <a href="/study/" class="flip-title">Study</a> 
-      </span>
-      
-        
-          
-          
-          
-            
-            
-            <span class="ellipsis" data-tippy-content="Last modified at: 17 May 2023">
-              <span class="sr-only">Last modified at:</span>
-              <span class="icon-history"></span>
-              <time datetime="2023-05-17T01:50:59+09:00">2023-05-17</time>
-            </span>
-          
-        
-      
-    </div>
-
-    
-    
-
+    <h1 class="page-title">Android</h1>
     
 
 
 
-  <div class="hr pb0"></div>
+  
+    <p class="note-sm" >
+      Android에 관한 공부 내용
+
+    </p>
+  
 
 
   </header>
 
   
-    <p>한글 테스트용 첫번째 포스트.</p>
 
-<h2 id="치느님-짱">치느님 짱</h2>
-<p>치킨은 정말 위대한 먹거리다. 치킨 먹고 싶다. 지금 이 글을 적는 지금도 치킨이 너무나 먹고 싶다. 나는 안드로이드 개발을 꿈꾸는 치킨이다. 음 치킨 음 치킨</p>
-<h3 id="짜장면도-먹고싶다-근데-치킨이-짱이긴-하다">짜장면도 먹고싶다. 근데 치킨이 짱이긴 하다.</h3>
 
-<h3 id="치킨이-먹고-싶은-개발자">치킨이 먹고 싶은 개발자.</h3>
 
-<blockquote>
-  <p>코딩이 좋으냐… 치킨이 좋으냐…</p>
 
-  <p>저에게 물으신다면… 당연히 코치딩킨</p>
-</blockquote>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This is python example.
-</span><span class="k">def</span> <span class="nf">chicken</span><span class="p">():</span>
-  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">I love</span><span class="gp">...</span><span class="sh">"</span><span class="s">)
-</span></code></pre></div></div>
+
+
+
+
+
 
   
-</article>
+  
+    
+    <h2 id="y-2023" class="hr-bottom">2023</h2>
+    <ul class="related-posts">
+    
+  
+  
 
+
+<li class="h4">
+  <a href="/android/2023-%20%20xxxx05-19-2023-05-19-test2/" class="flip-title"><span>[Android] 포스트 예정 사항</span></a>
+  <time class="faded fine" datetime="2023-05-19T01:36:49+09:00">19 May</time>
+</li>
+
+  </ul>
+
+
+</article>
 
 
   <hr class="dingbat related mb6" />
 
 
 
-
-
-
-  
-     
-
-
-  <aside class="about related mt4 mb4" role="complementary">
-    
-    
-
-<div class="author mt4">
-  
-
-  
-    
-
-
-<img
-  
-    src="/assets/img/me.jpg"
-    srcset="/assets/img/me.jpg 1x,/assets/img/me.jpg 2x"
-    
-  
-  alt="<Byoungjun> <Choi>"
-  class="avatar"
-  
-  width="120"
-  height="120"
-  loading="lazy"
-/>
-
-  
-
-  
-  
-  <h2  class="page-title hr-bottom">
-    About
-  </h2>
-
-  <p>안드로이드 개발에 관심이 많은 학생입니다.
-그리고 치킨을 굉장히 좋아합니다.</p>
-
-
-  <div class="sidebar-social">
-    <span class="sr-only">Social:</span>
-<ul>
-  
-    
-      
-
-
-
-  
-
-  
-  
-  
-  
-
-  
-
-  
-
-  <li>
-    <a href="https://github.com/Duck-jun99" title="GitHub" class="no-mark-external">
-      <span class="icon-github"></span>
-      <span class="sr-only">GitHub</span>
-    </a>
-  </li>
-
-
-    
-      
-
-
-
-  
-
-  
-  
-  
-  
-
-  
-
-  
-
-  <li>
-    <a href="mailto:codejunn@gmail.com" title="Email" class="no-mark-external">
-      <span class="icon-mail"></span>
-      <span class="sr-only">Email</span>
-    </a>
-  </li>
-
-
-    
-      
-
-
-
-  
-
-  
-  
-  
-  
-
-  
-
-  
-
-  <li>
-    <a href="https://play.google.com/store/apps/details?id=com.goalapp.goal" title="Google play" class="no-mark-external">
-      <span class="icon-google"></span>
-      <span class="sr-only">Google play</span>
-    </a>
-  </li>
-
-
-    
-  
-</ul>
-
-  </div>
-</div>
-
-  </aside>
-
-
-  
-
-  
-  
-
-  
-    
-
-
-  
-
-  
-  
-
-  
-    
-
-  
 
 
   
@@ -474,14 +320,14 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
   <div class="sidebar-about">
     
       <a class="no-hover" href="/" tabindex="-1">
-        <img src="/assets/img/logo.png" class="avatar" alt="Byoungjun" width="120" height="120" loading="lazy" />
+        <img src="/assets/img/duck-logo.png" class="avatar" alt="Byoungjun" width="120" height="120" loading="lazy" />
       </a>
     
     <a class="sidebar-title" href="/"><h2 class="h1">Byoungjun</h2></a>
     
     
       <p class="">
-        초보 개발자의 개발 블로그
+        노력하는 개발 블로그
 
       </p>
     

@@ -1,24 +1,21 @@
 ---
 # Featured tags need to have either the `list` or `grid` layout (PRO only).
-layout: about
+layout: list
 
 # The title of the tag's page.
-title: Portfolio
+title: CodingTest
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
-slug: portfolio
+slug: codingtest
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-  준비중입니다.
+  코테 공부 내용
 
 # (Optional) You can disable grouping posts by date.
 # no_groups: true
 
 # Exclude this example category from the sitemap.
 # DON'T USE THIS SETTING IN YOUR CATEGORIES!
-sitemap: false
+sitemap: true
 ---
-
-## Portfolio
-
