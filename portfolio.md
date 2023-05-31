@@ -19,8 +19,7 @@ description: >
 # DON'T USE THIS SETTING IN YOUR CATEGORIES!
 sitemap: false
 ---
-
-## Portfolio
+자세한 사항은 [최병준 포트폴리오]를 참고해주세요.
 
 ## Goal! - 단계별 소목표를 이루고 대목표를 달성!
 <!--
@@ -54,3 +53,4 @@ sitemap: false
 ---------------------------------
 
 [플레이 스토어]: https://play.google.com/store/apps/details?id=com.goalapp.goal
+[최병준 포트폴리오]: https://thoughtful-child-994.notion.site/18b751f9d6994903aa6c5135de8f7978

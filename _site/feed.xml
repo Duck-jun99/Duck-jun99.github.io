@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-05-19T01:36:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Byoungjun</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
-</subtitle><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><entry><title type="html">[CodingTest] 테스트</title><link href="http://localhost:4000/codingtest/2023-%20%20xxxx05-19-2023-05-19-test3/" rel="alternate" type="text/html" title="[CodingTest] 테스트" /><published>2023-05-19T01:36:49+09:00</published><updated>2023-05-19T01:27:05+09:00</updated><id>http://localhost:4000/codingtest/2023-05-19-test3</id><content type="html" xml:base="http://localhost:4000/codingtest/2023-%20%20xxxx05-19-2023-05-19-test3/"><![CDATA[<p>한글 테스트용 첫번째 포스트.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-05-31T22:32:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Byoungjun</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+</subtitle><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><entry><title type="html">[CodingTest] 테스트</title><link href="http://localhost:4000/codingtest/2023-%20%20xxxx05-31-2023-05-19-test3/" rel="alternate" type="text/html" title="[CodingTest] 테스트" /><published>2023-05-31T22:32:13+09:00</published><updated>2023-05-19T01:27:05+09:00</updated><id>http://localhost:4000/codingtest/2023-05-19-test3</id><content type="html" xml:base="http://localhost:4000/codingtest/2023-%20%20xxxx05-31-2023-05-19-test3/"><![CDATA[<p>한글 테스트용 첫번째 포스트.</p>
 
 <h2 id="치느님-짱">치느님 짱</h2>
 <p>치킨은 정말 위대한 먹거리다. 치킨 먹고 싶다. 지금 이 글을 적는 지금도 치킨이 너무나 먹고 싶다. 나는 안드로이드 개발을 꿈꾸는 치킨이다. 음 치킨 음 치킨</p>
@@ -16,8 +16,26 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This is python example.
 </span><span class="k">def</span> <span class="nf">chicken</span><span class="p">():</span>
   <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">I love</span><span class="gp">...</span><span class="sh">"</span><span class="s">)
-</span></code></pre></div></div>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="codingtest" /><summary type="html"><![CDATA[한글 테스트용 첫번째 포스트.]]></summary></entry><entry><title type="html">[Android] 포스트 예정 사항</title><link href="http://localhost:4000/android/2023-%20%20xxxx05-19-2023-05-19-test2/" rel="alternate" type="text/html" title="[Android] 포스트 예정 사항" /><published>2023-05-19T01:36:49+09:00</published><updated>2023-05-19T01:36:49+09:00</updated><id>http://localhost:4000/android/2023-05-19-test2</id><content type="html" xml:base="http://localhost:4000/android/2023-%20%20xxxx05-19-2023-05-19-test2/"><![CDATA[<p>안드로이드 분야에 대해 공부한 부분을 올릴 것입니다.</p>
+</span></code></pre></div></div>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="codingtest" /><summary type="html"><![CDATA[한글 테스트용 첫번째 포스트.]]></summary></entry><entry><title type="html">[Android] 안드로이드 개발자 로드맵</title><link href="http://localhost:4000/android/2023-%20%20xxxx05-31-2023-05-19-roadmap/" rel="alternate" type="text/html" title="[Android] 안드로이드 개발자 로드맵" /><published>2023-05-31T22:32:13+09:00</published><updated>2023-05-24T01:42:08+09:00</updated><id>http://localhost:4000/android/2023-05-19-roadmap</id><content type="html" xml:base="http://localhost:4000/android/2023-%20%20xxxx05-31-2023-05-19-roadmap/"><![CDATA[<p><b>참고 주소:</b> <a href="https://github.com/skydoves/android-developer-roadmap/blob/main/README_KR.md">Github: skydoves/android-developer-roadmap</a></p>
 
-<p>현재 저는, Java 언어에서 Kotlin 언어로 넘어가는 과정을 밟는 중입니다.</p>
+<p>2022년 안드로이드 개발자를 위한 로드맵입니다.</p>
+<p>참고로, 모든 구성을 따를 필요는 없고(그런 능력이 있다면 좋겠지만...) 필요한 부분을 따라 공부하면 되겠습니다.</p>
 
-<p>MVVM 패턴, jetpack, Coroutine, DataBinding에 대한 내용을 먼저 다룰 예정입니다.</p>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="android" /><summary type="html"><![CDATA[안드로이드 분야에 대해 공부한 부분을 올릴 것입니다.]]></summary></entry></feed>
+<p>필자는 안드로이드 개발에 kotlin을 사용합니다.</p>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="android" /><summary type="html"><![CDATA[참고 주소: Github: skydoves/android-developer-roadmap]]></summary></entry><entry><title type="html">[Android] AAC란?</title><link href="http://localhost:4000/android/2023-%20%20xxxx05-31-2023-05-23-AAC/" rel="alternate" type="text/html" title="[Android] AAC란?" /><published>2023-05-31T22:32:13+09:00</published><updated>2023-05-31T22:29:37+09:00</updated><id>http://localhost:4000/android/2023-05-23-AAC</id><content type="html" xml:base="http://localhost:4000/android/2023-%20%20xxxx05-31-2023-05-23-AAC/"><![CDATA[<p><a><img src="/assets/img/blog/post/google_io_2018_jetpack.png" alt="google io 2018 jetpack" /></a></p>
+
+<p>가끔 안드로이드를 공부하는 분들 중 AAC와 Jetpack을 혼동하시는 분이 계시다. 이번 포스트를 통해 확실히 정리하자면, <b>AAC는 Jetpack의 구성 요소 중 하나다!</b></p>
+
+<h1 id="aac-android-architecture-components">AAC: Android Architecture Components</h1>
+<p>안드로이드 Jetpack의 구성요소 중 하나이며, 아래와 같은 8가지가 포함되어 있다.</p>
+<ul>
+  <li>Data Binding</li>
+  <li>Lifecycles</li>
+  <li>LiveData</li>
+  <li>Navigation</li>
+  <li>Paging</li>
+  <li>Room</li>
+  <li>ViewModel</li>
+  <li>WorkManager</li>
+</ul>
+
+<p>각각에 대한 자세한 내용은 다음 포스팅에서 설명할 예정이다.</p>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="android" /><summary type="html"><![CDATA[]]></summary></entry></feed>
