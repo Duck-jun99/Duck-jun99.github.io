@@ -183,11 +183,28 @@ kramdown:
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-# disqus:                <username>
+#disqus:                duck-jun99-github-io
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # PRO version only!
 # tinyletter:            <username>
+
+# Set which comment system to use
+comments:
+  # 'disqus' / 'giscus' / 'utterances' are available
+  provider:            giscus
+
+giscus:
+  repo:                "Duck-jun99/giscus_repo"
+  repo-id:             "R_kgDOJrRi9A"
+  category:            "General"
+  category-id:         "DIC_kwDOJrRi9M4CW9Zj"
+  mapping:             "pathname"
+  reaction-enabled:    "1"
+  data-emit-metadata:  "0"
+  theme:               "light_tritanopia"
+  data-lang:           "ko"
+  crossorigin:         "anonymous"
 
 
 # Hydejack Settings
