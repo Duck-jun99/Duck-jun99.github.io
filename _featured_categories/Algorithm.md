@@ -3,14 +3,14 @@
 layout: list
 
 # The title of the tag's page.
-title: CodingTest
+title: Algorithm
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
-slug: codingtest
+slug: algorithm
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-  코테 공부 내용
+  알고리즘 공부 내용
 
 # (Optional) You can disable grouping posts by date.
 # no_groups: true

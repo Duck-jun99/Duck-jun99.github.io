@@ -3,14 +3,14 @@
 layout: list
 
 # The title of the tag's page.
-title: Study
+title: ETC
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
-slug: study
+slug: etc
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-  각 카테고리에 따른 공부 내용 정리
+  기타 필요한 내용 정리
 
 # (Optional) You can disable grouping posts by date.
 # no_groups: true
@@ -19,9 +19,3 @@ description: >
 # DON'T USE THIS SETTING IN YOUR CATEGORIES!
 sitemap: true
 ---
-
-## Category
----------------------
-- [Android](/android/)
-- [Algorithm](/algorithm/)
-- [ETC](/etc/)
