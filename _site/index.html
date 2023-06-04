@@ -74,23 +74,11 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 
 <link rel="alternate" href="http://localhost:4000/" hreflang="en">
 
-<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Byoungjun" />
+<!-- ... -->
 
-
-<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
-<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
-
-<link rel="manifest" href="/assets/site.webmanifest">
-
-<link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com">
-
-
-
-<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
-
-
-
-
+<!-- For sidebar folder -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="/assets/js/sidebar-folder.js"></script>
 
 
 <script>!function(r,c){"use strict";function a(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=c.createElement("script"),e=(n.src=e,t&&a(n,"load",t,{once:!0}),c.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=c.createElement("script");function o(){r._loaded=!0,t&&a(n,"load",t,{once:!0});var e=c.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():a(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){a(c.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}}(window,document);
@@ -107,7 +95,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2023-06-05T01:24:40+09:00',
+    INDEX_KEY: 'index--2023-06-05T03:24:50+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -223,46 +211,105 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
     <span class="sr-only">Navigation:</span>
 <ul>
   
+  
+  
     
       
-      <li>
-        <a
-          id="_drawer--opened"
-          href="/portfolio/"
-          class="sidebar-nav-item "
-          
-        >
-          Portfolio
-        </a>
-      </li>
+    
+  
     
       
-      <li>
-        <a
+        
+        
+        <li>
           
-          href="/study/"
-          class="sidebar-nav-item "
+          <div class="list-wrapper">
+            <a  href="/About/" class="sidebar-nav-item"  >About</a>
+            
+          </div>
           
-        >
-          Study
-        </a>
-      </li>
+        </li>
+      
+    
+  
     
       
-      <li>
-        <a
+    
+  
+    
+      
+        
+        
+        <li>
           
-          href="/about/"
-          class="sidebar-nav-item "
+          <div class="list-wrapper">
+            <a  href="/Portfolio/" class="sidebar-nav-item"  >Portfolio</a>
+            
+          </div>
           
-        >
-          About
-        </a>
-      </li>
+        </li>
+      
+    
+  
+    
+      
+        
+        
+        <li>
+          
+            <input type="checkbox" id="folder-checkbox-12" />
+          
+          <div class="list-wrapper">
+            <a  href="/study/" class="sidebar-nav-item"  >Study</a>
+            
+              <button class="spread-btn" onclick="javascript:spread(12)">
+                <label id="spread-icon-12" class="material-icons">arrow_right</label>
+              </button>
+            
+          </div>
+          
+            <ul class="list-body">
+                <li>
+                  <a class="sidebar-nav-subitem" href="/tag-android/">Android</a>
+                </li>
+            
+          
+            
+                <li>
+                  <a class="sidebar-nav-subitem" href="/tag-algorithm/">Algorithm</a>
+                </li>
+            
+          
+            
+                <li>
+                  <a class="sidebar-nav-subitem" href="/tag-etc/">ETC</a>
+                </li>
+            </ul>
+          
+        </li>
+      
+    
+  
+    
+      
+    
+  
+    
+      
+        
+        
+        <li>
+          
+          <div class="list-wrapper">
+            <a  href="/tags/" class="sidebar-nav-item"  >Tags</a>
+            
+          </div>
+          
+        </li>
+      
     
   
 </ul>
-
   </nav>
 
   
@@ -386,10 +433,10 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 
 
 
-<article id="post-etc-termux" class="page post mb6" role="article">
+<article id="post-termux" class="page post mb6" role="article">
   <header>
     <h1 class="post-title flip-project-title">
-      <a href="/etc/2023-%20%20xxxx06-04-termux/" class="flip-title">
+      <a href="/2023-%20%20xxxx06-04-termux/" class="flip-title">
         [Termux] 앱 활용하기1 - 앱 소개
       </a>
     </h1>
@@ -397,7 +444,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
     <div class="post-date">
       
       <span class="ellipsis mr1">
-        <time datetime="2023-06-04T00:00:00+09:00">04 Jun 2023</time> in <a href="/etc/" class="flip-title">ETC</a> on <span>Termux</span>
+        <time datetime="2023-06-04T00:00:00+09:00">04 Jun 2023</time>  on <span>Termux</span>, <a href="/tag-etc/" class="flip-title">ETC</a>
       </span>
       
         
@@ -409,7 +456,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
             <span class="ellipsis" data-tippy-content="Last modified at: 05 Jun 2023">
               <span class="sr-only">Last modified at:</span>
               <span class="icon-history"></span>
-              <time datetime="2023-06-05T01:16:22+09:00">2023-06-05</time>
+              <time datetime="2023-06-05T03:08:54+09:00">2023-06-05</time>
             </span>
           
         
@@ -436,7 +483,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
     
     <footer>
       <p class="read-more">
-        Continue reading <a class="heading flip-title" href="/etc/2023-%20%20xxxx06-04-termux/">[Termux] 앱 활용하기1 - 앱 소개</a>
+        Continue reading <a class="heading flip-title" href="/2023-%20%20xxxx06-04-termux/">[Termux] 앱 활용하기1 - 앱 소개</a>
 
       </p>
     </footer>
@@ -450,10 +497,10 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 
 
 
-<article id="post-android-AAC" class="page post mb6" role="article">
+<article id="post-AAC" class="page post mb6" role="article">
   <header>
     <h1 class="post-title flip-project-title">
-      <a href="/android/2023-%20%20xxxx05-19-AAC/" class="flip-title">
+      <a href="/2023-%20%20xxxx05-19-AAC/" class="flip-title">
         [Android] AAC란?
       </a>
     </h1>
@@ -461,7 +508,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
     <div class="post-date">
       
       <span class="ellipsis mr1">
-        <time datetime="2023-05-19T00:00:00+09:00">19 May 2023</time> in <a href="/android/" class="flip-title">Android</a> on <span>Android</span>
+        <time datetime="2023-05-19T00:00:00+09:00">19 May 2023</time>  on <a href="/tag-android/" class="flip-title">Android</a>, <span>Jetpack</span>
       </span>
       
         
@@ -473,7 +520,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
             <span class="ellipsis" data-tippy-content="Last modified at: 05 Jun 2023">
               <span class="sr-only">Last modified at:</span>
               <span class="icon-history"></span>
-              <time datetime="2023-06-05T00:22:29+09:00">2023-06-05</time>
+              <time datetime="2023-06-05T03:06:35+09:00">2023-06-05</time>
             </span>
           
         
@@ -500,7 +547,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
     
     <footer>
       <p class="read-more">
-        Continue reading <a class="heading flip-title" href="/android/2023-%20%20xxxx05-19-AAC/">[Android] AAC란?</a>
+        Continue reading <a class="heading flip-title" href="/2023-%20%20xxxx05-19-AAC/">[Android] AAC란?</a>
 
       </p>
     </footer>
@@ -514,10 +561,10 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 
 
 
-<article id="post-android-roadmap" class="page post mb6" role="article">
+<article id="post-roadmap" class="page post mb6" role="article">
   <header>
     <h1 class="post-title flip-project-title">
-      <a href="/android/2023-%20%20xxxx05-19-roadmap/" class="flip-title">
+      <a href="/2023-%20%20xxxx05-19-roadmap/" class="flip-title">
         [Android] 안드로이드 개발자 로드맵
       </a>
     </h1>
@@ -525,7 +572,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
     <div class="post-date">
       
       <span class="ellipsis mr1">
-        <time datetime="2023-05-19T00:00:00+09:00">19 May 2023</time> in <a href="/android/" class="flip-title">Android</a> on <span>Android</span>
+        <time datetime="2023-05-19T00:00:00+09:00">19 May 2023</time>  on <a href="/tag-android/" class="flip-title">Android</a>
       </span>
       
         
@@ -537,7 +584,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
             <span class="ellipsis" data-tippy-content="Last modified at: 05 Jun 2023">
               <span class="sr-only">Last modified at:</span>
               <span class="icon-history"></span>
-              <time datetime="2023-06-05T00:22:22+09:00">2023-06-05</time>
+              <time datetime="2023-06-05T03:05:42+09:00">2023-06-05</time>
             </span>
           
         
@@ -565,7 +612,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
     
     <footer>
       <p class="read-more">
-        Continue reading <a class="heading flip-title" href="/android/2023-%20%20xxxx05-19-roadmap/">[Android] 안드로이드 개발자 로드맵</a>
+        Continue reading <a class="heading flip-title" href="/2023-%20%20xxxx05-19-roadmap/">[Android] 안드로이드 개발자 로드맵</a>
 
       </p>
     </footer>
@@ -579,10 +626,10 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 
 
 
-<article id="post-algorithm-test3" class="page post mb6" role="article">
+<article id="post-test3" class="page post mb6" role="article">
   <header>
     <h1 class="post-title flip-project-title">
-      <a href="/algorithm/2023-%20%20xxxx05-19-test3/" class="flip-title">
+      <a href="/2023-%20%20xxxx05-19-test3/" class="flip-title">
         [Algorithm] 테스트
       </a>
     </h1>
@@ -590,7 +637,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
     <div class="post-date">
       
       <span class="ellipsis mr1">
-        <time datetime="2023-05-19T00:00:00+09:00">19 May 2023</time> in <a href="/algorithm/" class="flip-title">Algorithm</a> on <span>Algorithm</span>
+        <time datetime="2023-05-19T00:00:00+09:00">19 May 2023</time>  on <a href="/tag-algorithm/" class="flip-title">Algorithm</a>, <span>Test</span>
       </span>
       
         
@@ -602,7 +649,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
             <span class="ellipsis" data-tippy-content="Last modified at: 05 Jun 2023">
               <span class="sr-only">Last modified at:</span>
               <span class="icon-history"></span>
-              <time datetime="2023-06-05T01:24:40+09:00">2023-06-05</time>
+              <time datetime="2023-06-05T03:24:10+09:00">2023-06-05</time>
             </span>
           
         
@@ -634,7 +681,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
     
     <footer>
       <p class="read-more">
-        Continue reading <a class="heading flip-title" href="/algorithm/2023-%20%20xxxx05-19-test3/">[Algorithm] 테스트</a>
+        Continue reading <a class="heading flip-title" href="/2023-%20%20xxxx05-19-test3/">[Algorithm] 테스트</a>
 
       </p>
     </footer>

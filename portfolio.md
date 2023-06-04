@@ -1,25 +1,15 @@
 ---
-# Featured tags need to have either the `list` or `grid` layout (PRO only).
 layout: about
-
-# The title of the tag's page.
+type: category
 title: Portfolio
-
-# The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
 slug: portfolio
-
-# (Optional) Write a short (~150 characters) description of this featured tag.
+sidebar: true
+order: 2
 description: >
-   
-
-# (Optional) You can disable grouping posts by date.
-# no_groups: true
-
-# Exclude this example category from the sitemap.
-# DON'T USE THIS SETTING IN YOUR CATEGORIES!
-sitemap: false
 ---
->**자세한 사항은 [노션]을 참고해주세요.**
+
+
+>**자세한 사항은 [Notion]을 참고해주세요.**
 
 ## Goal! - 단계별 소목표를 이루고 대목표를 달성!
 
@@ -68,4 +58,4 @@ sitemap: false
 ---------------------------------
 
 [플레이 스토어]: https://play.google.com/store/apps/details?id=com.goalapp.goal
-[노션]: https://thoughtful-child-994.notion.site/18b751f9d6994903aa6c5135de8f7978
+[Notion]: https://thoughtful-child-994.notion.site/18b751f9d6994903aa6c5135de8f7978

@@ -1,14 +1,16 @@
 ---
 layout: about
-image: #/assets/img/blog/hydejack-9.jpg
+type: category
+title: About
+slug: about
+sidebar: true
+order: 1
 description: >
   
 hide_description: true
 redirect_from:
   - /download/
 ---
-
-# About
 
 <!--author-->
 
