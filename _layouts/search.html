@@ -1,0 +1,41 @@
+---
+layout: page
+---
+
+<div class="common-header search">
+  <div class="search">
+    <i class="fas fa-search fa-fw"></i>
+    <input id="search-input" 
+      type="search" 
+      tabindex="1" 
+      spellcheck="false" 
+      placeholder="Search"
+    >
+  </div>
+</div>
+
+
+<ul id="results-container"></ul>
+
+<script src="{{ site.baseurl }}/assets/js/simple-jekyll-search.min.js"></script>
+<script>
+  window.simpleJekyllSearch = new SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'), //입력부분에 해당하는 요소
+  resultsContainer: document.getElementById('results-container'), //출력부분에 해당하는 요소
+  json: '{{ site.baseurl }}/assets/json/search.json', //검색 대상이 되는 검색 데이터가 있는 json 파일
+  searchResultTemplate: `
+    <br>
+
+    💡  <a href="{url}"> <b>{title}</b><br></a>
+  
+    `,
+     
+  noResultsText: '검색 결과가 존재하지 않습니다.',
+  limit: 10,
+  fuzzy: false,
+  exclude: ['Welcome']
+})
+  window.onload = function() {
+    window.simpleJekyllSearch.search(document.getElementById('search-input').value);
+  };
+</script>
