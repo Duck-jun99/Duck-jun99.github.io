@@ -79,7 +79,7 @@ legal:
 copyright:             © 2021. All rights reserved.
 
 # Format of the permalinks
-permalink:             /:categories/:year-  xxxx:month-:day-:title/
+permalink:             /:categories/:year-:month-:day-:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
@@ -90,7 +90,7 @@ paginate_path:         /:num/
 # ---------------------------------------------------------------------------------------
 
 remote_theme: hydecorp/hydejack@v9
-#theme: jekyll-theme-hydejack
+# theme: jekyll-theme-hydejack
 
 
 # Customizaton

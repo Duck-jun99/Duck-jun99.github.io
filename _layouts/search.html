@@ -2,6 +2,8 @@
 layout: page
 ---
 
+{{ content }}
+
 <div class="common-header search">
   <div class="search">
     <i class="fas fa-search fa-fw"></i>
@@ -17,12 +19,12 @@ layout: page
 
 <ul id="results-container"></ul>
 
-<script src="{{ site.baseurl }}/assets/js/simple-jekyll-search.min.js"></script>
+<script src="/assets/js/simple-jekyll-search.min.js"></script>
 <script>
   window.simpleJekyllSearch = new SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'), //입력부분에 해당하는 요소
   resultsContainer: document.getElementById('results-container'), //출력부분에 해당하는 요소
-  json: '{{ site.baseurl }}/assets/json/search.json', //검색 대상이 되는 검색 데이터가 있는 json 파일
+  json: '/assets/json/search.json', //검색 대상이 되는 검색 데이터가 있는 json 파일
   searchResultTemplate: `
     <br>
 
