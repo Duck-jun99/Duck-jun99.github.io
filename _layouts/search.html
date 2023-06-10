@@ -19,4 +19,13 @@ layout: page
 
 <script src="/assets/js/simple-jekyll-search.min.js"></script>
 
-<script>window.simpleJekyllSearch=new SimpleJekyllSearch({searchInput:document.getElementById('search-input'),resultsContainer:document.getElementById('results-container'),json:'/assets/json/search.json',searchResultTemplate:`<br>💡<a href="{url}"><b>{title}</b><br></a>`,noResultsText:'검색 결과가 존재하지 않습니다.',limit:10,fuzzy:false,exclude:['Welcome']}); window.onload=function(){window.simpleJekyllSearch.search(document.getElementById('search-input').value)};</script>
+<script>window.simpleJekyllSearch=new SimpleJekyllSearch({searchInput:document.getElementById('search-input'),resultsContainer:document.getElementById('results-container'),json:'/assets/json/search.json',searchResultTemplate:
+  `<br>
+  <span style="background-color:#FFE6E6"> <b>Title</b> </span> 
+  <a href="{url}">: <b>{title}</b><br></a>
+  <span style="background-color:#E1F8FF"> <b>Tag</b> </span> 
+  <a style="text-transform:capitalize;">: {tags}</a>
+  </br>
+
+  `,
+  noResultsText:'검색 결과가 존재하지 않습니다.',limit:10,fuzzy:false,exclude:['Welcome']}); window.onload=function(){window.simpleJekyllSearch.search(document.getElementById('search-input').value)};</script>
