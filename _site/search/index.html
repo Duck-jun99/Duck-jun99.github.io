@@ -96,7 +96,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2023-06-11T01:56:02+09:00',
+    INDEX_KEY: 'index--2023-06-11T02:23:14+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -241,31 +241,9 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 
 <ul id="results-container"></ul>
 
-<script src="/assets/js/simple-jekyll-search.js"></script>
+<script src="/assets/js/simple-jekyll-search.min.js"></script>
 
-<script>
-  window.simpleJekyllSearch = new SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-
-  resultsContainer: document.getElementById('results-container'),
-  json: '/assets/json/search.json',
-  searchResultTemplate: `
-    <br>
-
-    💡  <a href="{url}"> <b>{title}</b><br></a>
-  
-    `,
-     
-  noResultsText: '검색 결과가 존재하지 않습니다.',
-  limit: 10,
-  fuzzy: false,
-  exclude: ['Welcome']})
-  window.onload = function() {
-    window.simpleJekyllSearch.search(document.getElementById('search-input').value);
-  };
-</script>
-
-
+<script>window.simpleJekyllSearch=new SimpleJekyllSearch({searchInput:document.getElementById('search-input'),resultsContainer:document.getElementById('results-container'),json:'/assets/json/search.json',searchResultTemplate:`<br>💡<a href="{url}"><b>{title}</b><br></a>`,noResultsText:'검색 결과가 존재하지 않습니다.',limit:10,fuzzy:false,exclude:['Welcome']}); window.onload=function(){window.simpleJekyllSearch.search(document.getElementById('search-input').value)};</script>
 </article>
 
 
