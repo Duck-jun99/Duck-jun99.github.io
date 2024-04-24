@@ -96,7 +96,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2024-04-24T13:09:59+09:00',
+    INDEX_KEY: 'index--2024-04-24T16:56:11+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -442,6 +442,224 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 
 
   
+
+  
+
+
+
+
+
+<article id="post-라이브러리 추가" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      <a href="/2024-04-24-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EC%B6%94%EA%B0%80/" class="flip-title">
+        [NowinJun]build-logic 이용 라이브러리 추가하기
+      </a>
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2024-04-24T00:00:00+09:00">24 Apr 2024</time>  on <a href="/tag-android/" class="flip-title">Android</a>
+      </span>
+      
+        
+          
+          
+          
+            
+            
+            <span class="ellipsis" data-tippy-content="Last modified at: 01 Jan 1970">
+              <span class="sr-only">Last modified at:</span>
+              <span class="icon-history"></span>
+              <time datetime="1970-01-01T09:01:39+09:00">1970-01-01</time>
+            </span>
+          
+        
+      
+    </div>
+
+    
+    
+
+    
+
+
+
+  <div class="hr pb0"></div>
+
+
+  </header>
+
+  
+    <p>Android에서는 build.gradle을 이용해 필요한 라이브러리, 모듈을 관리합니다.
+기존 프로젝트에서는 buildSrc 방식을 활용하고 있었습니다. 그런데 프로젝트를 모듈별로 분리하면서 모듈의 양이 많아질 수록 중복되는 코드의 양이 증가했습니다. 이는 분명 비효율적인 방법입니다.
+따라서 해당 프로젝트에서는 build-logic을 이용하여 gradle을 관리하고 있습니다.
+이번 게시물에서는 build-logic을 이용해 Glide 라이브러리를 추가한 경험을 서술하고자 합니다.</p>
+
+<p>현재까지 <b>Now-in-Jun</b> 프로젝트 구조트리는 다음과 같습니다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├──app
+│
+├──core
+│   ├──data
+│   ├──database
+│   ├──designsystem
+│   └──domain
+│
+├──feature
+│   ├──main
+│   ├──introduce
+│   ├──project
+│   └──setting
+│
+│
+├──gradle
+│   ├──wrapper
+│   └──libs.versions.toml
+│
+└──build-logic
+</code></pre></div></div>
+<p>해당 프로젝트에서는 build-logic을 통해 plugin을 만들어 관리하고, 또한 libs.versions.toml을 활용해 버전 관리를 합니다.</p>
+
+<h3 id="1-libsversionstoml에-glide-추가">1. libs.versions.toml에 Glide 추가</h3>
+<div class="language-toml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[versions]</span>
+
+<span class="err">...</span>
+
+<span class="py">glide</span> <span class="p">=</span> <span class="s">"4.12.0"</span>    <span class="c"># 여기서는 4.12.0 버전을 이용했습니다.</span>
+
+<span class="err">...</span>
+
+<span class="nn">[libraries]</span>
+
+<span class="err">...</span>
+
+<span class="py">glide</span> <span class="o">=</span> <span class="p">{</span> <span class="py">module</span> <span class="p">=</span> <span class="s">"com.github.bumptech.glide:glide"</span><span class="p">,</span> <span class="py">version.ref</span> <span class="p">=</span> <span class="s">"glide"</span> <span class="p">}</span>
+<span class="py">glide-compiler</span> <span class="o">=</span> <span class="p">{</span> <span class="py">module</span> <span class="p">=</span> <span class="s">"com.github.bumptech.glide:compiler"</span><span class="p">,</span> <span class="py">version.ref</span> <span class="p">=</span> <span class="s">"glide"</span> <span class="p">}</span>
+
+<span class="err">...</span>
+</code></pre></div></div>
+
+<h3 id="2-plugin-추가">2. Plugin 추가</h3>
+<p>build-logic 모듈 내부는 다음과 같습니다. 다른 것은 무시하고 해당 부분만 보도록 합니다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├──...
+│
+├──src
+│   └── main
+│       └──kotlin
+│           ├──com.<span class="s2">"""."""</span>
+│           │   ├──GlideAndroidPlugin.kt
+│           │   └──...
+│           │
+│           ├──nowinjun.android.library.gradle.kts
+│           │
+│           └──...
+│
+├──build.gradle.kts
+│
+└──settings.gradle.kts
+
+</code></pre></div></div>
+
+<h4 id="1-glideandroidpluginkt">1) GlideAndroidPlugin.kt</h4>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">import</span> <span class="nn">org.gradle.api.Plugin</span>
+<span class="k">import</span> <span class="nn">org.gradle.api.Project</span>
+<span class="k">import</span> <span class="nn">org.gradle.kotlin.dsl.dependencies</span>
+
+<span class="k">fun</span> <span class="nc">Project</span><span class="p">.</span><span class="nf">configureAndroidGlide</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">with</span><span class="p">(</span><span class="n">pluginManager</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">apply</span><span class="p">(</span><span class="s">"org.jetbrains.kotlin.kapt"</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">val</span> <span class="py">libs</span> <span class="p">=</span> <span class="n">extensions</span><span class="p">.</span><span class="n">libs</span>
+    <span class="nf">dependencies</span> <span class="p">{</span>
+        <span class="s">"implementation"</span><span class="p">(</span><span class="n">libs</span><span class="p">.</span><span class="nf">findLibrary</span><span class="p">(</span><span class="s">"glide"</span><span class="p">).</span><span class="k">get</span><span class="p">())</span>
+        <span class="s">"kapt"</span><span class="p">(</span><span class="n">libs</span><span class="p">.</span><span class="nf">findLibrary</span><span class="p">(</span><span class="s">"glide-compiler"</span><span class="p">).</span><span class="k">get</span><span class="p">())</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">AndroidGlidePlugin</span> <span class="p">:</span> <span class="nc">Plugin</span><span class="p">&lt;</span><span class="nc">Project</span><span class="p">&gt;</span> <span class="p">{</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">apply</span><span class="p">(</span><span class="n">target</span><span class="p">:</span> <span class="nc">Project</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">with</span><span class="p">(</span><span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nf">configureAndroidGlide</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="2-nowinjunandroidlibrarygradlekts">2) nowinjun.android.library.gradle.kts</h4>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">com.kotlinstudy.nowinjun.configureAndroidGlide</span>
+<span class="o">..</span><span class="p">.</span>
+
+<span class="nf">plugins</span> <span class="p">{</span>
+    <span class="nf">id</span><span class="p">(</span><span class="s">"com.android.library"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nf">configureAndroidGlide</span><span class="p">()</span>
+<span class="o">..</span><span class="p">.</span>
+</code></pre></div></div>
+
+<h4 id="3-buildgradlekts">3) build.gradle.kts</h4>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">plugins</span> <span class="p">{</span>
+    <span class="n">`kotlin-dsl`</span>
+    <span class="n">`kotlin-dsl-precompiled-script-plugins`</span>
+<span class="p">}</span>
+
+<span class="nf">dependencies</span> <span class="p">{</span>
+    <span class="nf">implementation</span><span class="p">(</span><span class="n">libs</span><span class="p">.</span><span class="n">android</span><span class="p">.</span><span class="n">gradlePlugin</span><span class="p">)</span>
+    <span class="nf">implementation</span><span class="p">(</span><span class="n">libs</span><span class="p">.</span><span class="n">kotlin</span><span class="p">.</span><span class="n">gradlePlugin</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nf">gradlePlugin</span> <span class="p">{</span>
+    <span class="nf">plugins</span> <span class="p">{</span>
+        <span class="nf">register</span><span class="p">(</span><span class="s">"androidGlide"</span><span class="p">){</span>
+            <span class="n">id</span> <span class="p">=</span> <span class="s">"nowinjun.android.glide"</span>
+            <span class="n">implementationClass</span> <span class="p">=</span> <span class="s">"com.kotlinstudy.nowinjun.AndroidGlidePlugin"</span>
+
+            <span class="o">..</span><span class="p">.</span>
+
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="4-settingsgradlekts">4) settings.gradle.kts</h4>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">enableFeaturePreview</span><span class="p">(</span><span class="s">"TYPESAFE_PROJECT_ACCESSORS"</span><span class="p">)</span>
+<span class="nf">dependencyResolutionManagement</span> <span class="p">{</span>
+    <span class="nf">repositories</span> <span class="p">{</span>
+        <span class="nf">google</span><span class="p">()</span>
+        <span class="nf">mavenCentral</span><span class="p">()</span>
+    <span class="p">}</span>
+    <span class="nf">versionCatalogs</span> <span class="p">{</span>
+        <span class="nf">create</span><span class="p">(</span><span class="s">"libs"</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nf">from</span><span class="p">(</span><span class="nf">files</span><span class="p">(</span><span class="s">"../gradle/libs.versions.toml"</span><span class="p">))</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>전체 코드는 <a href="https://github.com/Duck-jun99/Now-in-Jun">Now-in-Jun Repository</a>에서 확인할 수 있습니다.</p>
+
+
+
+    
+    
+    <footer>
+      <p class="read-more">
+        Continue reading <a class="heading flip-title" href="/2024-04-24-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EC%B6%94%EA%B0%80/">[NowinJun]build-logic 이용 라이브러리 추가하기</a>
+
+      </p>
+    </footer>
+  
+</article>
+
 
   
 
@@ -870,92 +1088,6 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
     <footer>
       <p class="read-more">
         Continue reading <a class="heading flip-title" href="/2023-05-19-%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0/">[프로그래머스]2022 KAKAO BLIND RECRUITMENT 신고 결과 받기</a>
-
-      </p>
-    </footer>
-  
-</article>
-
-
-  
-
-
-
-
-
-<article id="post-test3" class="page post mb6" role="article">
-  <header>
-    <h1 class="post-title flip-project-title">
-      <a href="/2023-05-19-test3/" class="flip-title">
-        [Algorithm] 테스트
-      </a>
-    </h1>
-
-    <div class="post-date">
-      
-      <span class="ellipsis mr1">
-        <time datetime="2023-05-19T00:00:00+09:00">19 May 2023</time>  on <a href="/tag-algorithm/" class="flip-title">Algorithm</a>, <span>Test</span>
-      </span>
-      
-        
-          
-          
-          
-            
-            
-            <span class="ellipsis" data-tippy-content="Last modified at: 01 Jan 1970">
-              <span class="sr-only">Last modified at:</span>
-              <span class="icon-history"></span>
-              <time datetime="1970-01-01T09:01:39+09:00">1970-01-01</time>
-            </span>
-          
-        
-      
-    </div>
-
-    
-    
-
-    
-
-
-
-  
-    <p class="note-sm" >
-      테스트용.
-
-    </p>
-  
-
-
-  </header>
-
-  
-    <p>한글 테스트용 첫번째 포스트.</p>
-
-<h2 id="치느님-짱">치느님 짱</h2>
-<p>치킨은 정말 위대한 먹거리다. 치킨 먹고 싶다. 지금 이 글을 적는 지금도 치킨이 너무나 먹고 싶다. 나는 안드로이드 개발을 꿈꾸는 치킨이다. 음 치킨 음 치킨</p>
-<h3 id="짜장면도-먹고싶다-근데-치킨이-짱이긴-하다">짜장면도 먹고싶다. 근데 치킨이 짱이긴 하다.</h3>
-
-<h3 id="치킨이-먹고-싶은-개발자">치킨이 먹고 싶은 개발자.</h3>
-
-<blockquote>
-  <p>코딩이 좋으냐… 치킨이 좋으냐…</p>
-
-  <p>저에게 물으신다면… 당연히 코치딩킨</p>
-</blockquote>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This is python example.
-</span><span class="k">def</span> <span class="nf">chicken</span><span class="p">():</span>
-  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">I love...</span><span class="sh">"</span><span class="p">)</span>
-</code></pre></div></div>
-
-
-    
-    
-    <footer>
-      <p class="read-more">
-        Continue reading <a class="heading flip-title" href="/2023-05-19-test3/">[Algorithm] 테스트</a>
 
       </p>
     </footer>
