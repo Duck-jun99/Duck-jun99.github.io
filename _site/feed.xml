@@ -1,5 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-11T02:50:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Byoungjun</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
-</subtitle><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><entry><title type="html">[Termux] 앱 활용하기1 - 앱 소개</title><link href="http://localhost:4000/2023-06-04-termux/" rel="alternate" type="text/html" title="[Termux] 앱 활용하기1 - 앱 소개" /><published>2023-06-04T00:00:00+09:00</published><updated>2023-06-05T03:08:54+09:00</updated><id>http://localhost:4000/termux</id><content type="html" xml:base="http://localhost:4000/2023-06-04-termux/"><![CDATA[<p><a><img src="/assets/img/blog/post/termux1.png" alt="termux" /></a></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-04-24T13:09:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Byoungjun</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+</subtitle><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><entry><title type="html">[NowinJun]Now-in-Jun 프로젝트 소개</title><link href="http://localhost:4000/2024-04-17-NowinJun-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/" rel="alternate" type="text/html" title="[NowinJun]Now-in-Jun 프로젝트 소개" /><published>2024-04-17T00:00:00+09:00</published><updated>1970-01-01T09:01:39+09:00</updated><id>http://localhost:4000/NowinJun%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8</id><content type="html" xml:base="http://localhost:4000/2024-04-17-NowinJun-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/"><![CDATA[<blockquote>
+  <p>Google의 Now-in-Android 앱 이름을 본따 Now-in-Jun 으로 이름을 설정했습니다.</p>
+</blockquote>
+
+<p>그동안 여러 Android 사이드 프로젝트를 진행해오며, 다양한 아키텍처를 적용해보고 최신 기술에 대한 공부를 해왔습니다.
+그리고 Google의 Now-in-Android 앱의 코드를 분석하며 Google이 권장하는 아키텍처 및 최신 트렌드 기술이 적용된 프로젝트를 기획하고 싶다는 생각을 갖게 되었습니다.
+따라서 이번 <b>Now-in-Jun</b> 프로젝트를 진행하게 되었습니다. 해당 프로젝트에서 보여주고자 하는 점은 다음과 같습니다.</p>
+
+<ul>
+  <li>제가 활용 가능한 Android Skill을 최대한 많이 이용하고자 합니다.</li>
+  <li>Google 권장 아키텍처를 적용하여 적절한 모듈 분리를 이룰 것입니다.</li>
+  <li>Only, Compose를 이용하여 UI를 구성할 것입니다.</li>
+</ul>
+
+<p>해당 프로젝트는 저에 대한 소개와 프로젝트, 기술 스택을 보여주는 앱이 될 예정입니다. 또한 해당 프로젝트에서 사용할 기술 스택은 다음과 같습니다.</p>
+
+<ul>
+  <li>Hilt</li>
+  <li>Room</li>
+  <li>Compose</li>
+  <li>Retrofit</li>
+  <li>ViewModel</li>
+</ul>
+
+<blockquote>
+  <p>프로젝트를 진행하며 기술 스택은 변경될 수 있습니다.</p>
+</blockquote>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="android" /><summary type="html"><![CDATA[Google의 Now-in-Android 앱 이름을 본따 Now-in-Jun 으로 이름을 설정했습니다. 그동안 여러 Android 사이드 프로젝트를 진행해오며, 다양한 아키텍처를 적용해보고 최신 기술에 대한 공부를 해왔습니다. 그리고 Google의 Now-in-Android 앱의 코드를 분석하며 Google이 권장하는 아키텍처 및 최신 트렌드 기술이 적용된 프로젝트를 기획하고 싶다는 생각을 갖게 되었습니다. 따라서 이번 Now-in-Jun 프로젝트를 진행하게 되었습니다. 해당 프로젝트에서 보여주고자 하는 점은 다음과 같습니다. 제가 활용 가능한 Android Skill을 최대한 많이 이용하고자 합니다. Google 권장 아키텍처를 적용하여 적절한 모듈 분리를 이룰 것입니다. Only, Compose를 이용하여 UI를 구성할 것입니다. 해당 프로젝트는 저에 대한 소개와 프로젝트, 기술 스택을 보여주는 앱이 될 예정입니다. 또한 해당 프로젝트에서 사용할 기술 스택은 다음과 같습니다. Hilt Room Compose Retrofit ViewModel 프로젝트를 진행하며 기술 스택은 변경될 수 있습니다.]]></summary></entry><entry><title type="html">[Termux] 앱 활용하기1 - 앱 소개</title><link href="http://localhost:4000/2023-06-04-termux/" rel="alternate" type="text/html" title="[Termux] 앱 활용하기1 - 앱 소개" /><published>2023-06-04T00:00:00+09:00</published><updated>1970-01-01T09:01:39+09:00</updated><id>http://localhost:4000/termux</id><content type="html" xml:base="http://localhost:4000/2023-06-04-termux/"><![CDATA[<p><a><img src="/assets/img/blog/post/termux1.png" alt="termux" /></a></p>
 
 <p>Termux 공식사이트: <a href="https://termux.dev/en/">https://termux.dev/en/</a></p>
 
@@ -52,7 +78,11 @@
 
 <p>글을 작성하다보니, Termux 앱에 억하심정이라도 있는 사람(?)처럼 아주 신명나게 공격하고 있네요! 그러나 가볍게 사용할 목적이라면 <b>충분히 활용할 가치가 있다고 봅니다.</b></p>
 
-<p>물론 루팅이 안된 디바이스에서 사용하려니 많은 제약이 있는 것은 사실이지만, 많은 구글링과 시행착오를 거치면서 저만의 해결책을 찾은 부분이 존재합니다. 그 부분을 모두 공개해서 이 글을 읽으시는 분들의 정신건강을 조금이나마 지켜드리기 위해 노력하겠습니다. 스트레스 받지마세요. 머리털 빠져요…</p>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="termux" /><category term="etc" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">[Algorithm] 테스트</title><link href="http://localhost:4000/2023-05-19-test3/" rel="alternate" type="text/html" title="[Algorithm] 테스트" /><published>2023-05-19T00:00:00+09:00</published><updated>2023-06-05T03:24:10+09:00</updated><id>http://localhost:4000/test3</id><content type="html" xml:base="http://localhost:4000/2023-05-19-test3/"><![CDATA[<p>한글 테스트용 첫번째 포스트.</p>
+<p>해당 앱에 대해 더욱 구체적으로 설명할 기회가 생긴다면 다음 글로 찾아뵙겠습니다!</p>
+
+<!-- 
+물론 루팅이 안된 디바이스에서 사용하려니 많은 제약이 있는 것은 사실이지만, 많은 구글링과 시행착오를 거치면서 저만의 해결책을 찾은 부분이 존재합니다. 그 부분을 모두 공개해서 이 글을 읽으시는 분들의 정신건강을 조금이나마 지켜드리기 위해 노력하겠습니다. 스트레스 받지마세요. 머리털 빠져요...
+-->]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="termux" /><category term="etc" /><summary type="html"><![CDATA[Termux 공식사이트: https://termux.dev/en/ 현재, Google play에 있는 버전은 최신 버전이 아닙니다. 최신 버전을 다운로드 받고 리눅스를 설치하는 방법은 다른 블로그를 검색하시면 찾을 수 있습니다. 저보다 더 글을 잘 쓰시는 분들이 잘 정리해놓으셨습니다… 이 포스트에서는 위 과정을 건너뛰고 termux의 활용에 대해 설명하겠습니다. Termux 앱에 대하여 간략하게 소개해드리면, Android 디바이스에서 루팅없이 터미널을 사용할 수 있게 해주는 앱이라고 생각하시면 됩니다. 터미널을 이용해 디바이스에서 서버를 구동시키는 것이 가능합니다. 혹시나 Android 공기계를 갖고 계시다면, 한번쯤 사용해보시는 것도 좋다고 생각합니다. 저는 Termux 앱을 이용해 남는 공기계에서 개인 서버를 운영하고 있습니다. 용도는 다음과 같습니다. 안드로이드 앱 개발 서버 통신 디버깅용 음악 스트리밍 사이트 클라우드DB(pydio 사용) 지금까지 Termux 앱을 사용하면서 느낀 장점은 다음과 같습니다. 휴대가 용이한 이동식 서버 구축 가능 ssh 연결을 통한 쉬운 개발환경 루팅 필요없음 반면, 단점으로는 다음과 같습니다. 루팅을 안함 –&gt; 장점이자 단점… 루팅을 하지 않으므로 Android 디바이스의 모든 기능을 활용할 수 없습니다. 지금까지 활용하면서 디바이스 사운드카드 직접 접근 불가, 포트 확인 불가(굉장히 치명적입니다…) 등의 문제가 있었습니다. 따라서 가벼운 용도로 활용하시길 권장드립니다. 디바이스, wifi환경에 따라 달라지는 성능 Termux앱을 통해 서버를 구축하면, 당연하게도 디바이스의 자원을 활용합니다. 디바이스의 퍼포먼스가 좋지 않다면, 속도 저하의 이유가 됩니다. 그리고 보통 wifi환경에서 사용하는데, 당연하게도 인터넷 속도와도 밀접환 관련이 있습니다. 저는 와이파이 공유기에 포트포워딩을 설정해서 외부에서 접속하는데, 가입된 인터넷 요금제가 낮다면.. RIP 디바이스 상시 화면 켜놔야함 속도 저하에 다양한 이유가 있지만… 진짜 가장 크게 생각하는 단점이자 중요한 사항입니다!! 디바이스 화면을 꺼놓으면 ssh 접속도 불가할 정도로 속도가 느립니다!!! 그래서 외출할 때 디바이스를 충전시키고 화면을 상시 켜놓는 것이 습관이 되었습니다… 내 전기세ㅠㅠ 글을 작성하다보니, Termux 앱에 억하심정이라도 있는 사람(?)처럼 아주 신명나게 공격하고 있네요! 그러나 가볍게 사용할 목적이라면 충분히 활용할 가치가 있다고 봅니다. 해당 앱에 대해 더욱 구체적으로 설명할 기회가 생긴다면 다음 글로 찾아뵙겠습니다!]]></summary></entry><entry><title type="html">[Algorithm] 테스트</title><link href="http://localhost:4000/2023-05-19-test3/" rel="alternate" type="text/html" title="[Algorithm] 테스트" /><published>2023-05-19T00:00:00+09:00</published><updated>1970-01-01T09:01:39+09:00</updated><id>http://localhost:4000/test3</id><content type="html" xml:base="http://localhost:4000/2023-05-19-test3/"><![CDATA[<p>한글 테스트용 첫번째 포스트.</p>
 
 <h2 id="치느님-짱">치느님 짱</h2>
 <p>치킨은 정말 위대한 먹거리다. 치킨 먹고 싶다. 지금 이 글을 적는 지금도 치킨이 너무나 먹고 싶다. 나는 안드로이드 개발을 꿈꾸는 치킨이다. 음 치킨 음 치킨</p>
@@ -68,13 +98,84 @@
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This is python example.
 </span><span class="k">def</span> <span class="nf">chicken</span><span class="p">():</span>
-  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">I love</span><span class="gp">...</span><span class="sh">"</span><span class="s">)
-</span></code></pre></div></div>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="algorithm" /><category term="test" /><summary type="html"><![CDATA[테스트용.]]></summary></entry><entry><title type="html">[Android] 안드로이드 개발자 로드맵</title><link href="http://localhost:4000/2023-05-19-roadmap/" rel="alternate" type="text/html" title="[Android] 안드로이드 개발자 로드맵" /><published>2023-05-19T00:00:00+09:00</published><updated>2023-06-05T03:05:42+09:00</updated><id>http://localhost:4000/roadmap</id><content type="html" xml:base="http://localhost:4000/2023-05-19-roadmap/"><![CDATA[<p><b>참고 주소:</b> <a href="https://github.com/skydoves/android-developer-roadmap/blob/main/README_KR.md">Github: skydoves/android-developer-roadmap</a></p>
+  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">I love...</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="algorithm" /><category term="test" /><summary type="html"><![CDATA[테스트용.]]></summary></entry><entry><title type="html">[프로그래머스]2022 KAKAO BLIND RECRUITMENT 신고 결과 받기</title><link href="http://localhost:4000/2023-05-19-%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0/" rel="alternate" type="text/html" title="[프로그래머스]2022 KAKAO BLIND RECRUITMENT 신고 결과 받기" /><published>2023-05-19T00:00:00+09:00</published><updated>1970-01-01T09:01:39+09:00</updated><id>http://localhost:4000/%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2023-05-19-%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0/"><![CDATA[<p>문제 출처: <a href="https://school.programmers.co.kr/learn/courses/30/lessons/92334">Programmers: 2022 KAKAO BLIND RECRUITMENT 신고 결과 받기</a></p>
+
+<p>까다로운 알고리즘을 이용하는 것이 아니라 단순 구현을 통해서 풀이가 가능한 문제였다..!</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">data class</span> <span class="nc">UserInfo</span><span class="p">(</span><span class="kd">var</span> <span class="py">count</span><span class="p">:</span><span class="nc">Int</span><span class="p">,</span> <span class="kd">var</span> <span class="py">stop</span><span class="p">:</span><span class="nc">Boolean</span><span class="p">=</span><span class="k">false</span><span class="p">,</span> 
+                    <span class="kd">var</span> <span class="py">pubArray</span><span class="p">:</span><span class="nc">ArrayList</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;</span> <span class="p">=</span> <span class="nc">ArrayList</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;())</span>
+
+<span class="kd">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">solution</span><span class="p">(</span><span class="n">id_list</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;,</span> <span class="n">report</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;,</span> <span class="n">k</span><span class="p">:</span> <span class="nc">Int</span><span class="p">):</span> <span class="nc">IntArray</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="py">answer</span><span class="p">:</span> <span class="nc">IntArray</span> <span class="p">=</span> <span class="nc">IntArray</span><span class="p">(</span><span class="n">id_list</span><span class="p">.</span><span class="n">size</span><span class="p">){</span><span class="mi">0</span><span class="p">}</span>
+        
+        <span class="kd">var</span> <span class="py">userMap</span> <span class="p">=</span> <span class="nc">HashMap</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">,</span> <span class="nc">UserInfo</span><span class="p">&gt;()</span>
+       
+        
+        <span class="k">for</span><span class="p">(</span><span class="n">repo</span> <span class="k">in</span> <span class="n">report</span><span class="p">){</span>
+            <span class="kd">var</span> <span class="p">(</span><span class="py">pub</span> <span class="p">,</span><span class="py">con</span><span class="p">)</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+            
+            <span class="c1">//publisher에 대한 신고기록이 없는 경우</span>
+            <span class="k">if</span><span class="p">(!</span><span class="n">userMap</span><span class="p">.</span><span class="nf">containsKey</span><span class="p">(</span><span class="n">con</span><span class="p">)){</span>
+                <span class="kd">var</span> <span class="py">count</span> <span class="p">=</span> <span class="mi">1</span>
+                <span class="kd">var</span> <span class="py">stop</span> <span class="p">=</span> <span class="k">if</span><span class="p">(</span><span class="n">count</span> <span class="p">==</span> <span class="n">k</span><span class="p">)</span> <span class="k">true</span> <span class="k">else</span> <span class="k">false</span>
+                <span class="n">userMap</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="nc">UserInfo</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="nf">arrayListOf</span><span class="p">(</span><span class="n">pub</span><span class="p">)))</span>
+            <span class="p">}</span>
+            <span class="c1">//새로운 신고 기록 생성</span>
+            <span class="k">else</span><span class="p">{</span>
+                <span class="kd">var</span> <span class="py">count</span> <span class="p">=</span> <span class="n">userMap</span><span class="p">[</span><span class="n">con</span><span class="p">]</span><span class="o">!!</span><span class="p">.</span><span class="n">count</span>
+                <span class="kd">var</span> <span class="py">pubArray</span> <span class="p">=</span> <span class="n">userMap</span><span class="p">[</span><span class="n">con</span><span class="p">]</span><span class="o">!!</span><span class="p">.</span><span class="n">pubArray</span>
+                <span class="kd">var</span> <span class="py">stop</span> <span class="p">=</span> <span class="n">userMap</span><span class="p">[</span><span class="n">con</span><span class="p">]</span><span class="o">!!</span><span class="p">.</span><span class="n">stop</span>
+                
+                <span class="k">if</span><span class="p">(!</span><span class="n">pubArray</span><span class="p">.</span><span class="nf">contains</span><span class="p">(</span><span class="n">pub</span><span class="p">)){</span>
+                    <span class="n">count</span><span class="p">+=</span><span class="mi">1</span>
+                    <span class="n">pubArray</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">pub</span><span class="p">)</span>
+                <span class="p">}</span>
+                
+                <span class="k">if</span><span class="p">(</span><span class="n">count</span><span class="p">&gt;=</span><span class="n">k</span><span class="p">){</span>
+                    <span class="n">stop</span> <span class="p">=</span> <span class="k">true</span>
+                <span class="p">}</span>
+                
+                <span class="n">userMap</span><span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="nc">UserInfo</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">pubArray</span><span class="p">))</span>
+                
+            <span class="p">}</span>
+        <span class="p">}</span>
+        
+        
+        <span class="c1">//println(userMap)</span>
+        
+        <span class="c1">//report에서 중복을 제거</span>
+        <span class="kd">var</span> <span class="py">repoSet</span> <span class="p">=</span> <span class="n">mutableSetOf</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;()</span>
+        
+        <span class="n">report</span><span class="p">.</span><span class="nf">forEach</span><span class="p">{</span>
+            <span class="n">repoSet</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>
+        <span class="p">}</span>
+        
+        <span class="c1">//println(repoSet)</span>
+        
+        <span class="k">for</span><span class="p">(</span><span class="n">repo</span> <span class="k">in</span> <span class="n">repoSet</span><span class="p">){</span>
+            <span class="kd">var</span> <span class="p">(</span><span class="py">a</span> <span class="p">,</span><span class="py">b</span><span class="p">)</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">userMap</span><span class="p">[</span><span class="n">b</span><span class="p">]</span><span class="o">!!</span><span class="p">.</span><span class="n">stop</span> <span class="p">==</span> <span class="k">true</span><span class="p">){</span>
+                
+                <span class="k">for</span><span class="p">(</span><span class="n">id</span> <span class="k">in</span> <span class="n">id_list</span><span class="p">.</span><span class="n">indices</span><span class="p">){</span>
+                    
+                    <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="p">==</span> <span class="n">id_list</span><span class="p">[</span><span class="n">id</span><span class="p">]){</span>
+                        <span class="n">answer</span><span class="p">[</span><span class="n">id</span><span class="p">]+=</span><span class="mi">1</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">answer</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="algorithm" /><summary type="html"><![CDATA[레벨: Lv.2]]></summary></entry><entry><title type="html">[Android] 안드로이드 개발자 로드맵</title><link href="http://localhost:4000/2023-05-19-roadmap/" rel="alternate" type="text/html" title="[Android] 안드로이드 개발자 로드맵" /><published>2023-05-19T00:00:00+09:00</published><updated>1970-01-01T09:01:39+09:00</updated><id>http://localhost:4000/roadmap</id><content type="html" xml:base="http://localhost:4000/2023-05-19-roadmap/"><![CDATA[<p><b>참고 주소:</b> <a href="https://github.com/skydoves/android-developer-roadmap/blob/main/README_KR.md">Github: skydoves/android-developer-roadmap</a></p>
 
 <p>2022년 안드로이드 개발자를 위한 로드맵입니다.</p>
 <p>참고로, 모든 구성을 따를 필요는 없고(그런 능력이 있다면 좋겠지만...) 필요한 부분을 따라 공부하면 되겠습니다.</p>
 
-<p>필자는 안드로이드 개발에 kotlin을 사용합니다.</p>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="android" /><summary type="html"><![CDATA[참고 주소: Github: skydoves/android-developer-roadmap]]></summary></entry><entry><title type="html">[Android] AAC란?</title><link href="http://localhost:4000/2023-05-19-AAC/" rel="alternate" type="text/html" title="[Android] AAC란?" /><published>2023-05-19T00:00:00+09:00</published><updated>2023-06-05T03:06:35+09:00</updated><id>http://localhost:4000/AAC</id><content type="html" xml:base="http://localhost:4000/2023-05-19-AAC/"><![CDATA[<h1 id="aac-android-architecture-components">AAC: Android Architecture Components</h1>
+<p>필자는 안드로이드 개발에 kotlin을 사용합니다.</p>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="android" /><summary type="html"><![CDATA[참고 주소: Github: skydoves/android-developer-roadmap 2022년 안드로이드 개발자를 위한 로드맵입니다. 참고로, 모든 구성을 따를 필요는 없고(그런 능력이 있다면 좋겠지만...) 필요한 부분을 따라 공부하면 되겠습니다. 필자는 안드로이드 개발에 kotlin을 사용합니다.]]></summary></entry><entry><title type="html">[Android] AAC란?</title><link href="http://localhost:4000/2023-05-19-AAC/" rel="alternate" type="text/html" title="[Android] AAC란?" /><published>2023-05-19T00:00:00+09:00</published><updated>1970-01-01T09:01:39+09:00</updated><id>http://localhost:4000/AAC</id><content type="html" xml:base="http://localhost:4000/2023-05-19-AAC/"><![CDATA[<h1 id="aac-android-architecture-components">AAC: Android Architecture Components</h1>
 
 <p><a><img src="/assets/img/blog/post/google_io_2018_jetpack.png" alt="google io 2018 jetpack" /></a></p>
 
@@ -92,4 +193,4 @@
   <li>WorkManager</li>
 </ul>
 
-<p>각각에 대한 자세한 내용은 다음 포스팅에서 설명할 예정입니다.</p>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="android" /><category term="jetpack" /><summary type="html"><![CDATA[AAC: Android Architecture Components]]></summary></entry></feed>
+<p>각각에 대한 자세한 내용은 다음 포스팅에서 설명할 예정입니다.</p>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="android" /><category term="jetpack" /><summary type="html"><![CDATA[AAC: Android Architecture Components 가끔 안드로이드를 공부하는 분들 중 AAC와 Jetpack을 혼동하시는 분이 계십니다. 이번 포스트를 통해 확실히 정리하자면, AAC는 Jetpack의 구성 요소 중 하나입니다! 그리고 앱을 효과적으로 디자인할 수 있는 다양한 라이브러리의 모음입니다. AAC에는 아래와 같은 8가지 라이브러리가 포함되어 있습니다. Data Binding Lifecycles LiveData Navigation Paging Room ViewModel WorkManager 각각에 대한 자세한 내용은 다음 포스팅에서 설명할 예정입니다.]]></summary></entry></feed>
