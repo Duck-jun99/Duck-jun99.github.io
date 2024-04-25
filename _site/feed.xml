@@ -1,5 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-04-24T17:36:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Byoungjun</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
-</subtitle><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><entry><title type="html">[NowinJun]build-logic 이용 라이브러리 추가하기</title><link href="http://localhost:4000/2024-04-24-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EC%B6%94%EA%B0%80/" rel="alternate" type="text/html" title="[NowinJun]build-logic 이용 라이브러리 추가하기" /><published>2024-04-24T00:00:00+09:00</published><updated>1970-01-01T09:01:39+09:00</updated><id>http://localhost:4000/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%20%EC%B6%94%EA%B0%80</id><content type="html" xml:base="http://localhost:4000/2024-04-24-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EC%B6%94%EA%B0%80/"><![CDATA[<p>Android에서는 build.gradle을 이용해 필요한 라이브러리, 모듈을 관리합니다.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-04-25T16:08:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Byoungjun</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+</subtitle><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><entry><title type="html">[프로그래머스] 입국심사</title><link href="http://localhost:4000/2024-04-25-%EC%9E%85%EA%B5%AD%EC%8B%AC%EC%82%AC/" rel="alternate" type="text/html" title="[프로그래머스] 입국심사" /><published>2024-04-25T00:00:00+09:00</published><updated>1970-01-01T09:01:39+09:00</updated><id>http://localhost:4000/%EC%9E%85%EA%B5%AD%EC%8B%AC%EC%82%AC</id><content type="html" xml:base="http://localhost:4000/2024-04-25-%EC%9E%85%EA%B5%AD%EC%8B%AC%EC%82%AC/"><![CDATA[<p>문제 출처: <a href="https://school.programmers.co.kr/learn/courses/30/lessons/43238?language=kotlin">Programmers: 입국심사</a></p>
+
+<h4 id="문제-설명">문제 설명</h4>
+<p>n명이 입국심사를 위해 줄을 서서 기다리고 있습니다. 각 입국심사대에 있는 심사관마다 심사하는데 걸리는 시간은 다릅니다.</p>
+
+<p>처음에 모든 심사대는 비어있습니다. 한 심사대에서는 동시에 한 명만 심사를 할 수 있습니다. 가장 앞에 서 있는 사람은 비어 있는 심사대로 가서 심사를 받을 수 있습니다. 하지만 더 빨리 끝나는 심사대가 있으면 기다렸다가 그곳으로 가서 심사를 받을 수도 있습니다.</p>
+
+<p>모든 사람이 심사를 받는데 걸리는 시간을 최소로 하고 싶습니다.</p>
+
+<p>입국심사를 기다리는 사람 수 n, 각 심사관이 한 명을 심사하는데 걸리는 시간이 담긴 배열 times가 매개변수로 주어질 때, 모든 사람이 심사를 받는데 걸리는 시간의 최솟값을 return 하도록 solution 함수를 작성해주세요.</p>
+
+<h4 id="제한-사항">제한 사항</h4>
+<blockquote>
+  <ul>
+    <li>입국심사를 기다리는 사람은 1명 이상 1,000,000,000명 이하입니다.</li>
+    <li>각 심사관이 한 명을 심사하는데 걸리는 시간은 1분 이상 1,000,000,000분 이하입니다.</li>
+    <li>심사관은 1명 이상 100,000명 이하입니다.</li>
+  </ul>
+</blockquote>
+
+<h4 id="입출력-예">입출력 예</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>n</th>
+      <th style="text-align: left">times</th>
+      <th style="text-align: left">return</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6</td>
+      <td style="text-align: left">[7, 10]</td>
+      <td style="text-align: left">28</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><b>입출력 예 설명</b></p>
+
+<p>가장 첫 두 사람은 바로 심사를 받으러 갑니다.</p>
+
+<p>7분이 되었을 때, 첫 번째 심사대가 비고 3번째 사람이 심사를 받습니다.</p>
+
+<p>10분이 되었을 때, 두 번째 심사대가 비고 4번째 사람이 심사를 받습니다.</p>
+
+<p>14분이 되었을 때, 첫 번째 심사대가 비고 5번째 사람이 심사를 받습니다.</p>
+
+<p>20분이 되었을 때, 두 번째 심사대가 비지만 6번째 사람이 그곳에서 심사를 받지 않고 1분을 더 기다린 후에 첫 번째 심사대에서 심사를 받으면 28분에 모든 사람의 심사가 끝납니다.</p>
+
+<hr />
+
+<h4 id="문제-풀이">문제 풀이</h4>
+
+<p>해당 문제의 경우, 제한 사항을 보면 알겠지만 시간 제한을 해결하기 위해 이분 탐색을 이용해 해결했다. 또한 Long형으로 변환해주는 것이 중요했다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">solution</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nc">Int</span><span class="p">,</span> <span class="n">times</span><span class="p">:</span> <span class="nc">IntArray</span><span class="p">):</span> <span class="nc">Long</span> <span class="p">{</span>
+        
+        <span class="c1">//최소, 최대 시간 설정</span>
+        <span class="kd">var</span> <span class="py">min</span><span class="p">:</span> <span class="nc">Long</span> <span class="p">=</span> <span class="mi">0</span>
+        <span class="kd">var</span> <span class="py">max</span><span class="p">:</span> <span class="nc">Long</span> <span class="p">=</span> <span class="n">times</span><span class="p">.</span><span class="nf">maxOrNull</span><span class="p">()</span><span class="o">!!</span> <span class="p">*</span> <span class="n">n</span><span class="p">.</span><span class="nf">toLong</span><span class="p">()</span>
+        
+        <span class="k">while</span><span class="p">(</span><span class="n">max</span> <span class="p">&gt;=</span> <span class="n">min</span><span class="p">){</span>
+            
+            <span class="kd">val</span> <span class="py">mid</span><span class="p">:</span><span class="nc">Long</span> <span class="p">=</span> <span class="p">(</span><span class="n">max</span><span class="p">+</span><span class="n">min</span><span class="p">)</span> <span class="p">/</span> <span class="mi">2</span>
+            
+            <span class="c1">//count = 심사 받을 수 있는 사람 수</span>
+            <span class="kd">var</span> <span class="py">count</span><span class="p">:</span> <span class="nc">Long</span> <span class="p">=</span> <span class="mi">0</span>
+            <span class="n">times</span><span class="p">.</span><span class="nf">forEach</span><span class="p">{</span> <span class="n">count</span> <span class="p">+=</span> <span class="n">mid</span><span class="p">/</span><span class="n">it</span> <span class="p">}</span>
+
+            <span class="c1">//n명 만큼 심사가 가능하면 시간을 더 단축시킬 수 있는지 탐색</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">count</span><span class="p">&gt;=</span><span class="n">n</span><span class="p">){</span>
+                <span class="n">max</span> <span class="p">=</span> <span class="n">mid</span> <span class="p">-</span> <span class="mi">1</span>
+            <span class="p">}</span>
+
+            <span class="c1">//n명 만큼 심사가 불가능한 경우이면,</span>
+            <span class="k">else</span><span class="p">{</span>
+                <span class="n">min</span> <span class="p">=</span> <span class="n">mid</span> <span class="p">+</span> <span class="mi">1</span>
+            <span class="p">}</span>
+            
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">min</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="algorithm" /><summary type="html"><![CDATA[레벨: Lv.3]]></summary></entry><entry><title type="html">[NowinJun] build-logic 이용 라이브러리 추가하기</title><link href="http://localhost:4000/2024-04-24-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EC%B6%94%EA%B0%80/" rel="alternate" type="text/html" title="[NowinJun] build-logic 이용 라이브러리 추가하기" /><published>2024-04-24T00:00:00+09:00</published><updated>1970-01-01T09:01:39+09:00</updated><id>http://localhost:4000/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%20%EC%B6%94%EA%B0%80</id><content type="html" xml:base="http://localhost:4000/2024-04-24-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EC%B6%94%EA%B0%80/"><![CDATA[<p>Android에서는 build.gradle을 이용해 필요한 라이브러리, 모듈을 관리합니다.
 기존 프로젝트에서는 buildSrc 방식을 활용하고 있었습니다. 그런데 프로젝트를 모듈별로 분리하면서 모듈의 양이 많아질 수록 중복되는 코드의 양이 증가했습니다. 이는 분명 비효율적인 방법입니다.
 따라서 해당 프로젝트에서는 build-logic을 이용하여 gradle을 관리하고 있습니다.
 이번 게시물에서는 build-logic을 이용해 Glide 라이브러리를 추가한 경험을 서술하고자 합니다.</p>
@@ -152,7 +239,78 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>전체 코드는 <a href="https://github.com/Duck-jun99/Now-in-Jun">Now-in-Jun Repository</a>에서 확인할 수 있습니다.</p>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="android" /><summary type="html"><![CDATA[Android에서는 build.gradle을 이용해 필요한 라이브러리, 모듈을 관리합니다. 기존 프로젝트에서는 buildSrc 방식을 활용하고 있었습니다. 그런데 프로젝트를 모듈별로 분리하면서 모듈의 양이 많아질 수록 중복되는 코드의 양이 증가했습니다. 이는 분명 비효율적인 방법입니다. 따라서 해당 프로젝트에서는 build-logic을 이용하여 gradle을 관리하고 있습니다. 이번 게시물에서는 build-logic을 이용해 Glide 라이브러리를 추가한 경험을 서술하고자 합니다. 현재까지 Now-in-Jun 프로젝트 구조트리는 다음과 같습니다. ├──app │ ├──core │ ├──data │ ├──database │ ├──designsystem │ └──domain │ ├──feature │ ├──main │ ├──introduce │ ├──project │ └──setting │ │ ├──gradle │ ├──wrapper │ └──libs.versions.toml │ └──build-logic 해당 프로젝트에서는 build-logic을 통해 plugin을 만들어 관리하고, 또한 libs.versions.toml을 활용해 버전 관리를 합니다. 1. libs.versions.toml에 Glide 추가 [versions] ... glide = "4.12.0" # 여기서는 4.12.0 버전을 이용했습니다. ... [libraries] ... glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" } glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" } ... 2. Plugin 추가 build-logic 모듈 내부는 다음과 같습니다. 다른 것은 무시하고 해당 부분만 보도록 합니다. ├──... │ ├──src │ └── main │ └──kotlin │ ├──com.""".""" │ │ ├──GlideAndroidPlugin.kt │ │ └──... │ │ │ ├──nowinjun.android.library.gradle.kts │ │ │ └──... │ ├──build.gradle.kts │ └──settings.gradle.kts 1) GlideAndroidPlugin.kt import org.gradle.api.Plugin import org.gradle.api.Project import org.gradle.kotlin.dsl.dependencies fun Project.configureAndroidGlide() { with(pluginManager) { apply("org.jetbrains.kotlin.kapt") } val libs = extensions.libs dependencies { "implementation"(libs.findLibrary("glide").get()) "kapt"(libs.findLibrary("glide-compiler").get()) } } class AndroidGlidePlugin : Plugin&lt;Project&gt; { override fun apply(target: Project) { with(target) { configureAndroidGlide() } } } 2) nowinjun.android.library.gradle.kts import com.kotlinstudy.nowinjun.configureAndroidGlide ... plugins { id("com.android.library") } configureAndroidGlide() ... 3) build.gradle.kts plugins { `kotlin-dsl` `kotlin-dsl-precompiled-script-plugins` } dependencies { implementation(libs.android.gradlePlugin) implementation(libs.kotlin.gradlePlugin) } gradlePlugin { plugins { register("androidGlide"){ id = "nowinjun.android.glide" implementationClass = "com.kotlinstudy.nowinjun.AndroidGlidePlugin" ... } } } 4) settings.gradle.kts enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS") dependencyResolutionManagement { repositories { google() mavenCentral() } versionCatalogs { create("libs") { from(files("../gradle/libs.versions.toml")) } } } 전체 코드는 Now-in-Jun Repository에서 확인할 수 있습니다.]]></summary></entry><entry><title type="html">[NowinJun]Now-in-Jun 프로젝트 소개</title><link href="http://localhost:4000/2024-04-17-NowinJun-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/" rel="alternate" type="text/html" title="[NowinJun]Now-in-Jun 프로젝트 소개" /><published>2024-04-17T00:00:00+09:00</published><updated>1970-01-01T09:01:39+09:00</updated><id>http://localhost:4000/NowinJun%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8</id><content type="html" xml:base="http://localhost:4000/2024-04-17-NowinJun-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/"><![CDATA[<blockquote>
+<p>전체 코드는 <a href="https://github.com/Duck-jun99/Now-in-Jun">Now-in-Jun Repository</a>에서 확인할 수 있습니다.</p>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="android" /><summary type="html"><![CDATA[Android에서는 build.gradle을 이용해 필요한 라이브러리, 모듈을 관리합니다. 기존 프로젝트에서는 buildSrc 방식을 활용하고 있었습니다. 그런데 프로젝트를 모듈별로 분리하면서 모듈의 양이 많아질 수록 중복되는 코드의 양이 증가했습니다. 이는 분명 비효율적인 방법입니다. 따라서 해당 프로젝트에서는 build-logic을 이용하여 gradle을 관리하고 있습니다. 이번 게시물에서는 build-logic을 이용해 Glide 라이브러리를 추가한 경험을 서술하고자 합니다. 현재까지 Now-in-Jun 프로젝트 구조트리는 다음과 같습니다. ├──app │ ├──core │ ├──data │ ├──database │ ├──designsystem │ └──domain │ ├──feature │ ├──main │ ├──introduce │ ├──project │ └──setting │ │ ├──gradle │ ├──wrapper │ └──libs.versions.toml │ └──build-logic 해당 프로젝트에서는 build-logic을 통해 plugin을 만들어 관리하고, 또한 libs.versions.toml을 활용해 버전 관리를 합니다. 1. libs.versions.toml에 Glide 추가 [versions] ... glide = "4.12.0" # 여기서는 4.12.0 버전을 이용했습니다. ... [libraries] ... glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" } glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" } ... 2. Plugin 추가 build-logic 모듈 내부는 다음과 같습니다. 다른 것은 무시하고 해당 부분만 보도록 합니다. ├──... │ ├──src │ └── main │ └──kotlin │ ├──com.""".""" │ │ ├──GlideAndroidPlugin.kt │ │ └──... │ │ │ ├──nowinjun.android.library.gradle.kts │ │ │ └──... │ ├──build.gradle.kts │ └──settings.gradle.kts 1) GlideAndroidPlugin.kt import org.gradle.api.Plugin import org.gradle.api.Project import org.gradle.kotlin.dsl.dependencies fun Project.configureAndroidGlide() { with(pluginManager) { apply("org.jetbrains.kotlin.kapt") } val libs = extensions.libs dependencies { "implementation"(libs.findLibrary("glide").get()) "kapt"(libs.findLibrary("glide-compiler").get()) } } class AndroidGlidePlugin : Plugin&lt;Project&gt; { override fun apply(target: Project) { with(target) { configureAndroidGlide() } } } 2) nowinjun.android.library.gradle.kts import com.kotlinstudy.nowinjun.configureAndroidGlide ... plugins { id("com.android.library") } configureAndroidGlide() ... 3) build.gradle.kts plugins { `kotlin-dsl` `kotlin-dsl-precompiled-script-plugins` } dependencies { implementation(libs.android.gradlePlugin) implementation(libs.kotlin.gradlePlugin) } gradlePlugin { plugins { register("androidGlide"){ id = "nowinjun.android.glide" implementationClass = "com.kotlinstudy.nowinjun.AndroidGlidePlugin" ... } } } 4) settings.gradle.kts enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS") dependencyResolutionManagement { repositories { google() mavenCentral() } versionCatalogs { create("libs") { from(files("../gradle/libs.versions.toml")) } } } 전체 코드는 Now-in-Jun Repository에서 확인할 수 있습니다.]]></summary></entry><entry><title type="html">[프로그래머스]2022 KAKAO BLIND RECRUITMENT 신고 결과 받기</title><link href="http://localhost:4000/2024-04-23-%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0/" rel="alternate" type="text/html" title="[프로그래머스]2022 KAKAO BLIND RECRUITMENT 신고 결과 받기" /><published>2024-04-23T00:00:00+09:00</published><updated>1970-01-01T09:01:39+09:00</updated><id>http://localhost:4000/%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2024-04-23-%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0/"><![CDATA[<p>문제 출처: <a href="https://school.programmers.co.kr/learn/courses/30/lessons/92334">Programmers: 2022 KAKAO BLIND RECRUITMENT 신고 결과 받기</a></p>
+
+<p>까다로운 알고리즘을 이용하는 것이 아니라 단순 구현을 통해서 풀이가 가능한 문제였다..!</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">data class</span> <span class="nc">UserInfo</span><span class="p">(</span><span class="kd">var</span> <span class="py">count</span><span class="p">:</span><span class="nc">Int</span><span class="p">,</span> <span class="kd">var</span> <span class="py">stop</span><span class="p">:</span><span class="nc">Boolean</span><span class="p">=</span><span class="k">false</span><span class="p">,</span> 
+                    <span class="kd">var</span> <span class="py">pubArray</span><span class="p">:</span><span class="nc">ArrayList</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;</span> <span class="p">=</span> <span class="nc">ArrayList</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;())</span>
+
+<span class="kd">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">solution</span><span class="p">(</span><span class="n">id_list</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;,</span> <span class="n">report</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;,</span> <span class="n">k</span><span class="p">:</span> <span class="nc">Int</span><span class="p">):</span> <span class="nc">IntArray</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="py">answer</span><span class="p">:</span> <span class="nc">IntArray</span> <span class="p">=</span> <span class="nc">IntArray</span><span class="p">(</span><span class="n">id_list</span><span class="p">.</span><span class="n">size</span><span class="p">){</span><span class="mi">0</span><span class="p">}</span>
+        
+        <span class="kd">var</span> <span class="py">userMap</span> <span class="p">=</span> <span class="nc">HashMap</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">,</span> <span class="nc">UserInfo</span><span class="p">&gt;()</span>
+       
+        
+        <span class="k">for</span><span class="p">(</span><span class="n">repo</span> <span class="k">in</span> <span class="n">report</span><span class="p">){</span>
+            <span class="kd">var</span> <span class="p">(</span><span class="py">pub</span> <span class="p">,</span><span class="py">con</span><span class="p">)</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+            
+            <span class="c1">//publisher에 대한 신고기록이 없는 경우</span>
+            <span class="k">if</span><span class="p">(!</span><span class="n">userMap</span><span class="p">.</span><span class="nf">containsKey</span><span class="p">(</span><span class="n">con</span><span class="p">)){</span>
+                <span class="kd">var</span> <span class="py">count</span> <span class="p">=</span> <span class="mi">1</span>
+                <span class="kd">var</span> <span class="py">stop</span> <span class="p">=</span> <span class="k">if</span><span class="p">(</span><span class="n">count</span> <span class="p">==</span> <span class="n">k</span><span class="p">)</span> <span class="k">true</span> <span class="k">else</span> <span class="k">false</span>
+                <span class="n">userMap</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="nc">UserInfo</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="nf">arrayListOf</span><span class="p">(</span><span class="n">pub</span><span class="p">)))</span>
+            <span class="p">}</span>
+            <span class="c1">//새로운 신고 기록 생성</span>
+            <span class="k">else</span><span class="p">{</span>
+                <span class="kd">var</span> <span class="py">count</span> <span class="p">=</span> <span class="n">userMap</span><span class="p">[</span><span class="n">con</span><span class="p">]</span><span class="o">!!</span><span class="p">.</span><span class="n">count</span>
+                <span class="kd">var</span> <span class="py">pubArray</span> <span class="p">=</span> <span class="n">userMap</span><span class="p">[</span><span class="n">con</span><span class="p">]</span><span class="o">!!</span><span class="p">.</span><span class="n">pubArray</span>
+                <span class="kd">var</span> <span class="py">stop</span> <span class="p">=</span> <span class="n">userMap</span><span class="p">[</span><span class="n">con</span><span class="p">]</span><span class="o">!!</span><span class="p">.</span><span class="n">stop</span>
+                
+                <span class="k">if</span><span class="p">(!</span><span class="n">pubArray</span><span class="p">.</span><span class="nf">contains</span><span class="p">(</span><span class="n">pub</span><span class="p">)){</span>
+                    <span class="n">count</span><span class="p">+=</span><span class="mi">1</span>
+                    <span class="n">pubArray</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">pub</span><span class="p">)</span>
+                <span class="p">}</span>
+                
+                <span class="k">if</span><span class="p">(</span><span class="n">count</span><span class="p">&gt;=</span><span class="n">k</span><span class="p">){</span>
+                    <span class="n">stop</span> <span class="p">=</span> <span class="k">true</span>
+                <span class="p">}</span>
+                
+                <span class="n">userMap</span><span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="nc">UserInfo</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">pubArray</span><span class="p">))</span>
+                
+            <span class="p">}</span>
+        <span class="p">}</span>
+        
+        
+        <span class="c1">//println(userMap)</span>
+        
+        <span class="c1">//report에서 중복을 제거</span>
+        <span class="kd">var</span> <span class="py">repoSet</span> <span class="p">=</span> <span class="n">mutableSetOf</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;()</span>
+        
+        <span class="n">report</span><span class="p">.</span><span class="nf">forEach</span><span class="p">{</span>
+            <span class="n">repoSet</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>
+        <span class="p">}</span>
+        
+        <span class="c1">//println(repoSet)</span>
+        
+        <span class="k">for</span><span class="p">(</span><span class="n">repo</span> <span class="k">in</span> <span class="n">repoSet</span><span class="p">){</span>
+            <span class="kd">var</span> <span class="p">(</span><span class="py">a</span> <span class="p">,</span><span class="py">b</span><span class="p">)</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">userMap</span><span class="p">[</span><span class="n">b</span><span class="p">]</span><span class="o">!!</span><span class="p">.</span><span class="n">stop</span> <span class="p">==</span> <span class="k">true</span><span class="p">){</span>
+                
+                <span class="k">for</span><span class="p">(</span><span class="n">id</span> <span class="k">in</span> <span class="n">id_list</span><span class="p">.</span><span class="n">indices</span><span class="p">){</span>
+                    
+                    <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="p">==</span> <span class="n">id_list</span><span class="p">[</span><span class="n">id</span><span class="p">]){</span>
+                        <span class="n">answer</span><span class="p">[</span><span class="n">id</span><span class="p">]+=</span><span class="mi">1</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">answer</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="algorithm" /><summary type="html"><![CDATA[레벨: Lv.2]]></summary></entry><entry><title type="html">[NowinJun] Now-in-Jun 프로젝트 소개</title><link href="http://localhost:4000/2024-04-17-NowinJun-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/" rel="alternate" type="text/html" title="[NowinJun] Now-in-Jun 프로젝트 소개" /><published>2024-04-17T00:00:00+09:00</published><updated>1970-01-01T09:01:39+09:00</updated><id>http://localhost:4000/NowinJun%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8</id><content type="html" xml:base="http://localhost:4000/2024-04-17-NowinJun-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/"><![CDATA[<blockquote>
   <p>Google의 Now-in-Android 앱 이름을 본따 Now-in-Jun 으로 이름을 설정했습니다.</p>
 </blockquote>
 
@@ -235,78 +393,7 @@
 
 <!-- 
 물론 루팅이 안된 디바이스에서 사용하려니 많은 제약이 있는 것은 사실이지만, 많은 구글링과 시행착오를 거치면서 저만의 해결책을 찾은 부분이 존재합니다. 그 부분을 모두 공개해서 이 글을 읽으시는 분들의 정신건강을 조금이나마 지켜드리기 위해 노력하겠습니다. 스트레스 받지마세요. 머리털 빠져요...
--->]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="termux" /><category term="etc" /><summary type="html"><![CDATA[Termux 공식사이트: https://termux.dev/en/ 현재, Google play에 있는 버전은 최신 버전이 아닙니다. 최신 버전을 다운로드 받고 리눅스를 설치하는 방법은 다른 블로그를 검색하시면 찾을 수 있습니다. 저보다 더 글을 잘 쓰시는 분들이 잘 정리해놓으셨습니다… 이 포스트에서는 위 과정을 건너뛰고 termux의 활용에 대해 설명하겠습니다. Termux 앱에 대하여 간략하게 소개해드리면, Android 디바이스에서 루팅없이 터미널을 사용할 수 있게 해주는 앱이라고 생각하시면 됩니다. 터미널을 이용해 디바이스에서 서버를 구동시키는 것이 가능합니다. 혹시나 Android 공기계를 갖고 계시다면, 한번쯤 사용해보시는 것도 좋다고 생각합니다. 저는 Termux 앱을 이용해 남는 공기계에서 개인 서버를 운영하고 있습니다. 용도는 다음과 같습니다. 안드로이드 앱 개발 서버 통신 디버깅용 음악 스트리밍 사이트 클라우드DB(pydio 사용) 지금까지 Termux 앱을 사용하면서 느낀 장점은 다음과 같습니다. 휴대가 용이한 이동식 서버 구축 가능 ssh 연결을 통한 쉬운 개발환경 루팅 필요없음 반면, 단점으로는 다음과 같습니다. 루팅을 안함 –&gt; 장점이자 단점… 루팅을 하지 않으므로 Android 디바이스의 모든 기능을 활용할 수 없습니다. 지금까지 활용하면서 디바이스 사운드카드 직접 접근 불가, 포트 확인 불가(굉장히 치명적입니다…) 등의 문제가 있었습니다. 따라서 가벼운 용도로 활용하시길 권장드립니다. 디바이스, wifi환경에 따라 달라지는 성능 Termux앱을 통해 서버를 구축하면, 당연하게도 디바이스의 자원을 활용합니다. 디바이스의 퍼포먼스가 좋지 않다면, 속도 저하의 이유가 됩니다. 그리고 보통 wifi환경에서 사용하는데, 당연하게도 인터넷 속도와도 밀접환 관련이 있습니다. 저는 와이파이 공유기에 포트포워딩을 설정해서 외부에서 접속하는데, 가입된 인터넷 요금제가 낮다면.. RIP 디바이스 상시 화면 켜놔야함 속도 저하에 다양한 이유가 있지만… 진짜 가장 크게 생각하는 단점이자 중요한 사항입니다!! 디바이스 화면을 꺼놓으면 ssh 접속도 불가할 정도로 속도가 느립니다!!! 그래서 외출할 때 디바이스를 충전시키고 화면을 상시 켜놓는 것이 습관이 되었습니다… 내 전기세ㅠㅠ 글을 작성하다보니, Termux 앱에 억하심정이라도 있는 사람(?)처럼 아주 신명나게 공격하고 있네요! 그러나 가볍게 사용할 목적이라면 충분히 활용할 가치가 있다고 봅니다. 해당 앱에 대해 더욱 구체적으로 설명할 기회가 생긴다면 다음 글로 찾아뵙겠습니다!]]></summary></entry><entry><title type="html">[프로그래머스]2022 KAKAO BLIND RECRUITMENT 신고 결과 받기</title><link href="http://localhost:4000/2023-05-19-%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0/" rel="alternate" type="text/html" title="[프로그래머스]2022 KAKAO BLIND RECRUITMENT 신고 결과 받기" /><published>2023-05-19T00:00:00+09:00</published><updated>1970-01-01T09:01:39+09:00</updated><id>http://localhost:4000/%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0</id><content type="html" xml:base="http://localhost:4000/2023-05-19-%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0/"><![CDATA[<p>문제 출처: <a href="https://school.programmers.co.kr/learn/courses/30/lessons/92334">Programmers: 2022 KAKAO BLIND RECRUITMENT 신고 결과 받기</a></p>
-
-<p>까다로운 알고리즘을 이용하는 것이 아니라 단순 구현을 통해서 풀이가 가능한 문제였다..!</p>
-
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">data class</span> <span class="nc">UserInfo</span><span class="p">(</span><span class="kd">var</span> <span class="py">count</span><span class="p">:</span><span class="nc">Int</span><span class="p">,</span> <span class="kd">var</span> <span class="py">stop</span><span class="p">:</span><span class="nc">Boolean</span><span class="p">=</span><span class="k">false</span><span class="p">,</span> 
-                    <span class="kd">var</span> <span class="py">pubArray</span><span class="p">:</span><span class="nc">ArrayList</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;</span> <span class="p">=</span> <span class="nc">ArrayList</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;())</span>
-
-<span class="kd">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-    <span class="k">fun</span> <span class="nf">solution</span><span class="p">(</span><span class="n">id_list</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;,</span> <span class="n">report</span><span class="p">:</span> <span class="nc">Array</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;,</span> <span class="n">k</span><span class="p">:</span> <span class="nc">Int</span><span class="p">):</span> <span class="nc">IntArray</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="py">answer</span><span class="p">:</span> <span class="nc">IntArray</span> <span class="p">=</span> <span class="nc">IntArray</span><span class="p">(</span><span class="n">id_list</span><span class="p">.</span><span class="n">size</span><span class="p">){</span><span class="mi">0</span><span class="p">}</span>
-        
-        <span class="kd">var</span> <span class="py">userMap</span> <span class="p">=</span> <span class="nc">HashMap</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">,</span> <span class="nc">UserInfo</span><span class="p">&gt;()</span>
-       
-        
-        <span class="k">for</span><span class="p">(</span><span class="n">repo</span> <span class="k">in</span> <span class="n">report</span><span class="p">){</span>
-            <span class="kd">var</span> <span class="p">(</span><span class="py">pub</span> <span class="p">,</span><span class="py">con</span><span class="p">)</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
-            
-            <span class="c1">//publisher에 대한 신고기록이 없는 경우</span>
-            <span class="k">if</span><span class="p">(!</span><span class="n">userMap</span><span class="p">.</span><span class="nf">containsKey</span><span class="p">(</span><span class="n">con</span><span class="p">)){</span>
-                <span class="kd">var</span> <span class="py">count</span> <span class="p">=</span> <span class="mi">1</span>
-                <span class="kd">var</span> <span class="py">stop</span> <span class="p">=</span> <span class="k">if</span><span class="p">(</span><span class="n">count</span> <span class="p">==</span> <span class="n">k</span><span class="p">)</span> <span class="k">true</span> <span class="k">else</span> <span class="k">false</span>
-                <span class="n">userMap</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="nc">UserInfo</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="nf">arrayListOf</span><span class="p">(</span><span class="n">pub</span><span class="p">)))</span>
-            <span class="p">}</span>
-            <span class="c1">//새로운 신고 기록 생성</span>
-            <span class="k">else</span><span class="p">{</span>
-                <span class="kd">var</span> <span class="py">count</span> <span class="p">=</span> <span class="n">userMap</span><span class="p">[</span><span class="n">con</span><span class="p">]</span><span class="o">!!</span><span class="p">.</span><span class="n">count</span>
-                <span class="kd">var</span> <span class="py">pubArray</span> <span class="p">=</span> <span class="n">userMap</span><span class="p">[</span><span class="n">con</span><span class="p">]</span><span class="o">!!</span><span class="p">.</span><span class="n">pubArray</span>
-                <span class="kd">var</span> <span class="py">stop</span> <span class="p">=</span> <span class="n">userMap</span><span class="p">[</span><span class="n">con</span><span class="p">]</span><span class="o">!!</span><span class="p">.</span><span class="n">stop</span>
-                
-                <span class="k">if</span><span class="p">(!</span><span class="n">pubArray</span><span class="p">.</span><span class="nf">contains</span><span class="p">(</span><span class="n">pub</span><span class="p">)){</span>
-                    <span class="n">count</span><span class="p">+=</span><span class="mi">1</span>
-                    <span class="n">pubArray</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">pub</span><span class="p">)</span>
-                <span class="p">}</span>
-                
-                <span class="k">if</span><span class="p">(</span><span class="n">count</span><span class="p">&gt;=</span><span class="n">k</span><span class="p">){</span>
-                    <span class="n">stop</span> <span class="p">=</span> <span class="k">true</span>
-                <span class="p">}</span>
-                
-                <span class="n">userMap</span><span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="nc">UserInfo</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">pubArray</span><span class="p">))</span>
-                
-            <span class="p">}</span>
-        <span class="p">}</span>
-        
-        
-        <span class="c1">//println(userMap)</span>
-        
-        <span class="c1">//report에서 중복을 제거</span>
-        <span class="kd">var</span> <span class="py">repoSet</span> <span class="p">=</span> <span class="n">mutableSetOf</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;()</span>
-        
-        <span class="n">report</span><span class="p">.</span><span class="nf">forEach</span><span class="p">{</span>
-            <span class="n">repoSet</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>
-        <span class="p">}</span>
-        
-        <span class="c1">//println(repoSet)</span>
-        
-        <span class="k">for</span><span class="p">(</span><span class="n">repo</span> <span class="k">in</span> <span class="n">repoSet</span><span class="p">){</span>
-            <span class="kd">var</span> <span class="p">(</span><span class="py">a</span> <span class="p">,</span><span class="py">b</span><span class="p">)</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">userMap</span><span class="p">[</span><span class="n">b</span><span class="p">]</span><span class="o">!!</span><span class="p">.</span><span class="n">stop</span> <span class="p">==</span> <span class="k">true</span><span class="p">){</span>
-                
-                <span class="k">for</span><span class="p">(</span><span class="n">id</span> <span class="k">in</span> <span class="n">id_list</span><span class="p">.</span><span class="n">indices</span><span class="p">){</span>
-                    
-                    <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="p">==</span> <span class="n">id_list</span><span class="p">[</span><span class="n">id</span><span class="p">]){</span>
-                        <span class="n">answer</span><span class="p">[</span><span class="n">id</span><span class="p">]+=</span><span class="mi">1</span>
-                    <span class="p">}</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        
-        <span class="k">return</span> <span class="n">answer</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="algorithm" /><summary type="html"><![CDATA[레벨: Lv.2]]></summary></entry><entry><title type="html">[Android] 안드로이드 개발자 로드맵</title><link href="http://localhost:4000/2023-05-19-roadmap/" rel="alternate" type="text/html" title="[Android] 안드로이드 개발자 로드맵" /><published>2023-05-19T00:00:00+09:00</published><updated>1970-01-01T09:01:39+09:00</updated><id>http://localhost:4000/roadmap</id><content type="html" xml:base="http://localhost:4000/2023-05-19-roadmap/"><![CDATA[<p><b>참고 주소:</b> <a href="https://github.com/skydoves/android-developer-roadmap/blob/main/README_KR.md">Github: skydoves/android-developer-roadmap</a></p>
+-->]]></content><author><name>&lt;Byoungjun&gt; &lt;Choi&gt;</name><email>&lt;codejunn@gmail.com&gt;</email></author><category term="termux" /><category term="etc" /><summary type="html"><![CDATA[Termux 공식사이트: https://termux.dev/en/ 현재, Google play에 있는 버전은 최신 버전이 아닙니다. 최신 버전을 다운로드 받고 리눅스를 설치하는 방법은 다른 블로그를 검색하시면 찾을 수 있습니다. 저보다 더 글을 잘 쓰시는 분들이 잘 정리해놓으셨습니다… 이 포스트에서는 위 과정을 건너뛰고 termux의 활용에 대해 설명하겠습니다. Termux 앱에 대하여 간략하게 소개해드리면, Android 디바이스에서 루팅없이 터미널을 사용할 수 있게 해주는 앱이라고 생각하시면 됩니다. 터미널을 이용해 디바이스에서 서버를 구동시키는 것이 가능합니다. 혹시나 Android 공기계를 갖고 계시다면, 한번쯤 사용해보시는 것도 좋다고 생각합니다. 저는 Termux 앱을 이용해 남는 공기계에서 개인 서버를 운영하고 있습니다. 용도는 다음과 같습니다. 안드로이드 앱 개발 서버 통신 디버깅용 음악 스트리밍 사이트 클라우드DB(pydio 사용) 지금까지 Termux 앱을 사용하면서 느낀 장점은 다음과 같습니다. 휴대가 용이한 이동식 서버 구축 가능 ssh 연결을 통한 쉬운 개발환경 루팅 필요없음 반면, 단점으로는 다음과 같습니다. 루팅을 안함 –&gt; 장점이자 단점… 루팅을 하지 않으므로 Android 디바이스의 모든 기능을 활용할 수 없습니다. 지금까지 활용하면서 디바이스 사운드카드 직접 접근 불가, 포트 확인 불가(굉장히 치명적입니다…) 등의 문제가 있었습니다. 따라서 가벼운 용도로 활용하시길 권장드립니다. 디바이스, wifi환경에 따라 달라지는 성능 Termux앱을 통해 서버를 구축하면, 당연하게도 디바이스의 자원을 활용합니다. 디바이스의 퍼포먼스가 좋지 않다면, 속도 저하의 이유가 됩니다. 그리고 보통 wifi환경에서 사용하는데, 당연하게도 인터넷 속도와도 밀접환 관련이 있습니다. 저는 와이파이 공유기에 포트포워딩을 설정해서 외부에서 접속하는데, 가입된 인터넷 요금제가 낮다면.. RIP 디바이스 상시 화면 켜놔야함 속도 저하에 다양한 이유가 있지만… 진짜 가장 크게 생각하는 단점이자 중요한 사항입니다!! 디바이스 화면을 꺼놓으면 ssh 접속도 불가할 정도로 속도가 느립니다!!! 그래서 외출할 때 디바이스를 충전시키고 화면을 상시 켜놓는 것이 습관이 되었습니다… 내 전기세ㅠㅠ 글을 작성하다보니, Termux 앱에 억하심정이라도 있는 사람(?)처럼 아주 신명나게 공격하고 있네요! 그러나 가볍게 사용할 목적이라면 충분히 활용할 가치가 있다고 봅니다. 해당 앱에 대해 더욱 구체적으로 설명할 기회가 생긴다면 다음 글로 찾아뵙겠습니다!]]></summary></entry><entry><title type="html">[Android] 안드로이드 개발자 로드맵</title><link href="http://localhost:4000/2023-05-19-roadmap/" rel="alternate" type="text/html" title="[Android] 안드로이드 개발자 로드맵" /><published>2023-05-19T00:00:00+09:00</published><updated>1970-01-01T09:01:39+09:00</updated><id>http://localhost:4000/roadmap</id><content type="html" xml:base="http://localhost:4000/2023-05-19-roadmap/"><![CDATA[<p><b>참고 주소:</b> <a href="https://github.com/skydoves/android-developer-roadmap/blob/main/README_KR.md">Github: skydoves/android-developer-roadmap</a></p>
 
 <p>2022년 안드로이드 개발자를 위한 로드맵입니다.</p>
 <p>참고로, 모든 구성을 따를 필요는 없고(그런 능력이 있다면 좋겠지만...) 필요한 부분을 따라 공부하면 되겠습니다.</p>
