@@ -96,7 +96,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2024-04-25T16:08:34+09:00',
+    INDEX_KEY: 'index--2024-04-25T19:12:43+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -449,6 +449,154 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 
 
 
+<article id="post-Notion API 이용하기" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      <a href="/2024-04-25-Notion-API-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0/" class="flip-title">
+        [Notion] Notion API 이용하기
+      </a>
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2024-04-25T00:00:00+09:00">25 Apr 2024</time>  on <a href="/tag-etc/" class="flip-title">ETC</a>
+      </span>
+      
+        
+          
+          
+          
+            
+            
+            <span class="ellipsis" data-tippy-content="Last modified at: 01 Jan 1970">
+              <span class="sr-only">Last modified at:</span>
+              <span class="icon-history"></span>
+              <time datetime="1970-01-01T09:01:39+09:00">1970-01-01</time>
+            </span>
+          
+        
+      
+    </div>
+
+    
+    
+
+    
+
+
+
+  <div class="hr pb0"></div>
+
+
+  </header>
+
+  
+    <!--
+<a><img src="/assets/img/blog/post/termux1.png" alt="termux"></a>
+-->
+
+<p>Now-in-Jun 프로젝트를 진행하며 제 포트폴리오 정보를 가져오기 위해 Notion API를 사용하고자 합니다.</p>
+
+<p>따라서 본인의 개인 노션에 저장되어 있는 포트폴리오 Database에 접근하여 해당 정보를 가져오는 방법을 설명하고자 합니다.</p>
+
+<h4 id="1-notion-api-integration-생성하기">1. Notion API Integration 생성하기</h4>
+
+<p><a href="https://www.notion.so/my-integrations">Notion API Integration 생성</a>에 접속해서 Integration을 생성해줍니다.
+생성하면 개인 Secret Key가 발급이 됩니다. 해당 키를 안전한 곳에 저장해두길 바랍니다.
+<br /></p>
+
+<h4 id="2-노션과-integration-연동">2. 노션과 Integration 연동</h4>
+
+<p><a><img src="/assets/img/blog/post/notion-api-1/notion-api-1.png" alt="notion-api-1" /></a></p>
+
+<p>생성한 Integration을 API를 이용할 노션 페이지와 연동해줍니다. <b>Connect to</b> 검색창에 <b>int</b>만 입력해도 해당 생성한 Integration이 뜹니다. 클릭해서 연동을 해줍시다!</p>
+
+<blockquote>
+  <p>⚠️ 만약 본인의 Integration이 검색이 안된다면 Integration을 생성한 워크스페이스와 해당 노션 워크스페이스가 일치하는지 확인해주세요!</p>
+</blockquote>
+
+<p><br /></p>
+
+<h4 id="3-database-query-가져오기-테스트postman-이용">3. Database Query 가져오기 테스트(Postman 이용)</h4>
+<p><a><img src="/assets/img/blog/post/notion-api-1/notion-api-2.png" alt="notion-api-2" /></a></p>
+
+<p>예시를 보여드리기 위해, 연동한 제 노션 페이지에 임의의 데이터베이스를 만들었습니다. 이 데이터베이스의 쿼리를 조회해보겠습니다.</p>
+
+<p>데이터베이스의 쿼리를 조회하기 위해서는 해당 데이터베이스의 ID를 알아야 합니다. 위 사진에서 링크를 복사해보면 다음과 같이 나올 것입니다.</p>
+
+<blockquote>
+  <p><b>https://www.notion.so/[데이터베이스 ID]?[쏼라쏼라…]</b></p>
+</blockquote>
+
+<p>해당 링크에서 [데이터베이스 ID]에 해당하는 부분이 본인 데이터베이스의 ID입니다. 다른 부분은 제외하고 해당 부분만 이용할 것입니다.</p>
+
+<p>저희가 Notion API를 이용해 해당 쿼리를 조회하기 위해서는 다음과 같은 정보가 필요합니다.</p>
+<ul>
+  <li>Integration Secret Key (1번 단계에서 생성된 개인 키)</li>
+  <li>Notion-Version</li>
+  <li>데이터베이스 ID</li>
+</ul>
+
+<p>자 이제 Postman에 접속하고 해당 URL에 POST를 보내보겠습니다.
+해당 URL 주소는 아래와 같습니다. [데이터베이스 ID] 부분에 본인의 데이터베이스 ID를 넣어줍니다.</p>
+<blockquote>
+  <p>https://api.notion.com/v1/databases/[데이터베이스 ID]/query</p>
+</blockquote>
+
+<p><a><img src="/assets/img/blog/post/notion-api-1/notion-api-3.png" alt="notion-api-3" /></a></p>
+
+<p>그 다음, Authorization에서 Bearer Token을 선택해주고 오른쪽에 본인의 Integration Secret Key를 입력해줍니다.</p>
+
+<p><a><img src="/assets/img/blog/post/notion-api-1/notion-api-4.png" alt="notion-api-4" /></a></p>
+
+<p>마지막으로, Headers에 Notion-Version을 추가해줍시다. 이 글을 쓰는 지금, 2022-02-22를 사용하면 됩니다.</p>
+
+<p><a><img src="/assets/img/blog/post/notion-api-1/notion-api-5.png" alt="notion-api-5" /></a></p>
+
+<p>이제 Send 버튼을 눌러 response가 성공적으로 넘어오는지 확인합시다! 쿼리가 제대로 조회된다면 해당 JSON을 이용해 여러분이 사용할 곳에서 예쁘게 사용해주면 됩니다!
+만약 response의 상태 코드가 200이 아니고 오류가 발생한다면, 아래 사이트를 참고해서 확인해봅시다.</p>
+
+<p><a href="https://developers.notion.com/reference/status-codes">Notion API 상태 코드</a></p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<p>노션 API를 사용하는 방법은 공식 문서에 매우 자세히 설명되어 있습니다. 아래의 사이트를 확인하면 더욱 쉽게 할 수 있을겁니다~</p>
+
+<p>감사합니다😀</p>
+
+<p><br /></p>
+
+<h4 id="참고-사이트">참고 사이트</h4>
+
+<p><a href="https://developers.notion.com">Notion API 공식 문서</a></p>
+
+<p><a href="https://www.postman.com/notionhq/workspace/notion-s-api-workspace/request/15568543-cddcc0aa-d534-4744-b37a-ddf36dee7d8f?tab=overview">Notion Postman 참고</a></p>
+
+
+
+    
+    
+    <footer>
+      <p class="read-more">
+        Continue reading <a class="heading flip-title" href="/2024-04-25-Notion-API-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0/">[Notion] Notion API 이용하기</a>
+
+      </p>
+    </footer>
+  
+</article>
+
+
+  
+
+
+
+
+
 <article id="post-입국심사" class="page post mb6" role="article">
   <header>
     <h1 class="post-title flip-project-title">
@@ -741,7 +889,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
   <header>
     <h1 class="post-title flip-project-title">
       <a href="/2024-04-23-%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0/" class="flip-title">
-        [프로그래머스]2022 KAKAO BLIND RECRUITMENT 신고 결과 받기
+        [프로그래머스] 2022 KAKAO BLIND RECRUITMENT 신고 결과 받기
       </a>
     </h1>
 
@@ -793,7 +941,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
     
     <footer>
       <p class="read-more">
-        Continue reading <a class="heading flip-title" href="/2024-04-23-%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0/">[프로그래머스]2022 KAKAO BLIND RECRUITMENT 신고 결과 받기</a>
+        Continue reading <a class="heading flip-title" href="/2024-04-23-%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0/">[프로그래머스] 2022 KAKAO BLIND RECRUITMENT 신고 결과 받기</a>
 
       </p>
     </footer>

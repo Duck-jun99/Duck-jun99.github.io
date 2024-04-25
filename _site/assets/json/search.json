@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "[Notion] Notion API 이용하기",
+      "category" : "",
+      "tags"     : "etc",
+      "url"      : "/2024-04-25-Notion-API-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0/",
+      "date"     : "2024-04-25 00:00:00 +0900"
+    } ,
+  
+    {
       "title"    : "[프로그래머스] 입국심사",
       "category" : "",
       "tags"     : "algorithm",
@@ -17,7 +25,7 @@
     } ,
   
     {
-      "title"    : "[프로그래머스]2022 KAKAO BLIND RECRUITMENT 신고 결과 받기",
+      "title"    : "[프로그래머스] 2022 KAKAO BLIND RECRUITMENT 신고 결과 받기",
       "category" : "",
       "tags"     : "algorithm",
       "url"      : "/2024-04-23-%EC%8B%A0%EA%B3%A0%EA%B2%B0%EA%B3%BC%EB%B0%9B%EA%B8%B0/",
